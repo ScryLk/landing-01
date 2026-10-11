@@ -1,0 +1,7 @@
+{
+  "name": "@dobraverse/ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { "./commerce": "./commerce.js", "./primitives.css": "./primitives.css" }
+}

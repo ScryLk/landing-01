@@ -1,0 +1,17 @@
+{
+  "name": "dobraverse-landings",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "pnpm -r --filter './apps/**' build",
+    "build:experiencia": "pnpm --filter @dobraverse/experiencia-tecnologia build",
+    "build:industria": "pnpm --filter @dobraverse/industria-40 build",
+    "check": "pnpm -r --filter './apps/**' check",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "dev:experiencia": "pnpm --filter @dobraverse/experiencia-tecnologia dev",
+    "dev:industria": "pnpm --filter @dobraverse/industria-40 dev"
+  }
+}

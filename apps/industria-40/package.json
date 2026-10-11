@@ -1,0 +1,13 @@
+{
+  "name": "@dobraverse/industria-40",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "dobraverse-build",
+    "check": "dobraverse-check",
+    "dev": "dobraverse-serve --watch --port 8101",
+    "preview": "dobraverse-serve --port 8101"
+  },
+  "devDependencies": { "@dobraverse/config": "workspace:*", "@dobraverse/ui": "workspace:*" }
+}

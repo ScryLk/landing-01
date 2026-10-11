@@ -1,0 +1,11 @@
+{
+  "name": "@dobraverse/config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "dobraverse-build": "build.mjs",
+    "dobraverse-check": "check.mjs",
+    "dobraverse-serve": "serve.mjs"
+  }
+}

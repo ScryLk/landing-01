@@ -1,0 +1,8 @@
+node_modules/
+.pnpm-store/
+apps/*/dist/
+apps/*/.dist-*/
+.env
+.env.*
+!.env.example
+.DS_Store

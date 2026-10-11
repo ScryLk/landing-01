@@ -1,0 +1,28 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  apps/experiencia-tecnologia:
+    devDependencies:
+      '@dobraverse/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+
+  apps/industria-40:
+    devDependencies:
+      '@dobraverse/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@dobraverse/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+
+  packages/config: {}
+
+  packages/ui: {}
