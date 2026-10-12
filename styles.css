@@ -14,3 +14,19 @@
 .book-topics .eyebrow{margin-bottom:10px}
 .book-topics>p:last-child{font-size:14px;line-height:1.8;margin:0}
 @media(max-width:700px){:root .previews{grid-template-columns:1fr;gap:32px}.previews figure{max-width:420px;width:100%;margin:auto}.preview-heading{margin-top:36px}.previews img{width:100%}}
+.hero-discount-badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;padding:6px 14px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:0.5px;margin-bottom:22px;border:1px solid rgba(8,189,241,0.45);box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.hero-discount-tag{color:var(--blue);font-weight:900;letter-spacing:0.8px}
+.hero-discount-text{color:#fff}
+.discount-pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue);animation:pulse-blue 2s infinite}
+@keyframes pulse-blue{0%{box-shadow:0 0 0 0 rgba(8,189,241,0.7)}70%{box-shadow:0 0 0 8px rgba(8,189,241,0)}100%{box-shadow:0 0 0 0 rgba(8,189,241,0)}}
+.offer .discount-badge{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:6px 14px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:0.6px;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+.offer .discount-tag{color:var(--blue);font-weight:900}
+.offer .discount-label{color:#fff;font-size:10px;letter-spacing:1px}
+.offer .price-wrap{margin:16px 0 24px}
+.offer .price-original-row{display:flex;align-items:baseline;gap:8px;font-size:14px;color:rgba(17,17,17,0.8);font-weight:600}
+.offer .price-original-row s{color:rgba(17,17,17,0.65);font-size:17px;text-decoration:line-through;text-decoration-color:#111;text-decoration-thickness:2px}
+.offer .price{font-size:clamp(36px,4.2vw,48px);font-weight:900;margin:4px 0 8px;letter-spacing:-1.2px;color:var(--ink);line-height:1}
+.offer .price-savings{display:inline-flex;align-items:center;gap:6px;background:rgba(17,17,17,0.12);border:1px solid rgba(17,17,17,0.22);padding:5px 12px;border-radius:6px;font-size:12px;font-weight:700;color:var(--ink);margin-top:4px}
+.offer .savings-icon{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--ink);color:var(--blue);font-size:10px;font-weight:900}
+@media(prefers-reduced-motion:reduce){.discount-pulse{animation:none!important}}
+

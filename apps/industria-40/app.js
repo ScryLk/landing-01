@@ -12,7 +12,8 @@ bindCheckout(document, {
 });
 document.querySelectorAll('[data-product-title]').forEach(node => { node.textContent = product.title; });
 document.querySelectorAll('[data-product-subtitle]').forEach(node => { node.textContent = product.subtitle; });
-if (product.price.trim()) document.getElementById('price').textContent = product.price;
+if (product.price && product.price.trim()) document.getElementById('price').textContent = product.price;
+if (product.originalPrice && document.getElementById('price-original')) document.getElementById('price-original').textContent = product.originalPrice;
 
 const localAsset = value => {
   if (typeof value !== 'string' || !value.startsWith('assets/') || value.includes('..') || /[?#\\]/.test(value)) return null;

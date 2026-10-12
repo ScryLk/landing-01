@@ -1,6 +1,8 @@
 window.BOOK_CONFIG = Object.freeze({
   CHECKOUT_URL: 'INSERIR_LINK_KIWIFY_OU_HOTMART',
-  price: '', // Ex.: 'R$ 49,90'. Deixe vazio para consultar no checkout.
+  price: 'R$ 29,00',
+  originalPrice: 'R$ 58,00',
+  discountBadge: '50% OFF',
   author: '',
   contactEmail: '',
   coverUrl: 'assets/capa.webp', // Capa original extraída do PDF fornecido.

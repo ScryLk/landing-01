@@ -963,11 +963,144 @@ a {
   margin:0 0 18px 20px
 }
 
+.offer .price-wrap {
+  margin: 18px 0 24px;
+}
+
+.offer .price-original-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.75);
+  font-weight: 600;
+}
+
+.offer .price-original-row s {
+  color: rgba(17, 17, 17, 0.65);
+  font-size: 17px;
+  text-decoration: line-through;
+  text-decoration-color: #111;
+  text-decoration-thickness: 2px;
+}
+
 .offer .price {
-  font-size:24px;
-  font-weight:700;
-  margin:28px 0;
-  letter-spacing:-.6px
+  font-size: clamp(36px, 4.2vw, 48px);
+  font-weight: 900;
+  margin: 4px 0 8px;
+  letter-spacing: -1.2px;
+  color: #111;
+  line-height: 1;
+}
+
+.offer .price-savings {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17, 17, 17, 0.12);
+  border: 1px solid rgba(17, 17, 17, 0.22);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+  margin-top: 4px;
+}
+
+.offer .savings-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #111;
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.offer .discount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.offer .discount-tag {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.offer .discount-label {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-discount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 138, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.hero-discount-tag {
+  color: var(--orange);
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+.hero-discount-text {
+  color: #f7f6f2;
+}
+
+.discount-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: pulse-orange 2s infinite;
+}
+
+@keyframes pulse-orange {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 138, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 138, 0, 0);
+  }
+}
+
+.badge-discount-highlight {
+  background: #111 !important;
+  color: var(--orange) !important;
+  border: 1px solid var(--orange) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-weight: 800 !important;
 }
 
 .offer .button {

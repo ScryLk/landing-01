@@ -19,7 +19,8 @@
   document.getElementById('checkout-status').textContent = checkout
     ? 'Você será direcionado à plataforma de compra.'
     : 'Compra ainda indisponível: link de checkout em configuração.';
-  if (config.price.trim()) document.getElementById('price').textContent = config.price;
+  if (config.price && config.price.trim()) document.getElementById('price').textContent = config.price;
+  if (config.originalPrice && document.getElementById('price-original')) document.getElementById('price-original').textContent = config.originalPrice;
   document.querySelectorAll('[data-cover]').forEach(img => {
     img.src = config.coverUrl;
     img.alt = 'Capa do e-book Da sua experiência à tecnologia';
