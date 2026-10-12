@@ -1,7 +1,7 @@
 window.INDUSTRIA_CONFIG = Object.freeze({
   title: 'Afinal, o que é Indústria 4.0?',
   subtitle: 'Entenda como máquinas, pessoas e dados estão transformando o chão de fábrica.',
-  checkoutUrl: 'INSERIR_CHECKOUT_KIWIFY',
+  checkoutUrl: 'https://pay.kiwify.com.br/oKMFvAf',
   price: 'R$ 29,00',
   originalPrice: 'R$ 58,00',
   discountBadge: '50% OFF',

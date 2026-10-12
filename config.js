@@ -1,5 +1,5 @@
 window.BOOK_CONFIG = Object.freeze({
-  CHECKOUT_URL: 'INSERIR_LINK_KIWIFY_OU_HOTMART',
+  CHECKOUT_URL: 'https://pay.kiwify.com.br/o33UXNZ',
   price: 'R$ 29,00',
   originalPrice: 'R$ 58,00',
   discountBadge: '50% OFF',

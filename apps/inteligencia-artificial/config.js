@@ -1,6 +1,6 @@
 // Dados públicos deste produto. Nunca coloque senhas, tokens ou informações privadas aqui.
 const PRODUCT_NAME = 'Afinal, vale a pena estudar Inteligência Artificial?';
-const CHECKOUT_URL = 'INSERIR_URL_KIWIFY';
+const CHECKOUT_URL = 'https://pay.kiwify.com.br/A1Z836I';
 const PRODUCT_PRICE = 'R$ 29,00';
 const ORIGINAL_PRICE = 'R$ 58,00';
 const PRODUCT_COVER = 'assets/capa.webp';
