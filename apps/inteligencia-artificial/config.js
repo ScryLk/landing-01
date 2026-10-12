@@ -1,7 +1,8 @@
 // Dados públicos deste produto. Nunca coloque senhas, tokens ou informações privadas aqui.
 const PRODUCT_NAME = 'Afinal, vale a pena estudar Inteligência Artificial?';
 const CHECKOUT_URL = 'INSERIR_URL_KIWIFY';
-const PRODUCT_PRICE = 'INSERIR_PRECO';
+const PRODUCT_PRICE = 'R$ 29,00';
+const ORIGINAL_PRICE = 'R$ 58,00';
 const PRODUCT_COVER = 'assets/capa.webp';
 
 window.IA_CONFIG = Object.freeze({
@@ -9,6 +10,8 @@ window.IA_CONFIG = Object.freeze({
   subtitle: 'Uma reflexão sobre inteligência artificial, formação acadêmica e as decisões que tomamos diante de um futuro em transformação.',
   checkoutUrl: CHECKOUT_URL,
   price: PRODUCT_PRICE,
+  originalPrice: ORIGINAL_PRICE,
+  discountBadge: '50% OFF',
   cover: PRODUCT_COVER,
   author: '', // Preencher somente com a autoria confirmada.
   contactEmail: '', // E-mail público confirmado, sem dados de acesso.
@@ -37,6 +40,6 @@ window.IA_CONFIG = Object.freeze({
     }
   ],
   institutionalLinks: [], // Links reais de privacidade/termos: [{ label, url }], somente HTTPS.
-  previousVolumeUrl: '', // URL HTTPS real de “Afinal, o que é Indústria 4.0?”, quando publicada.
+  previousVolumeUrl: 'https://industria.dobraverse.io/', // URL real de “Afinal, o que é Indústria 4.0?”
   inheritUtm: true // Encaminha apenas os cinco parâmetros UTM documentados, sem rastreador.
 });

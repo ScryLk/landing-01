@@ -55,6 +55,9 @@ if (price) {
   const configured = text(product.price);
   price.textContent = configured && !/^INSERIR(?:_|\s|$)/i.test(configured) ? configured : 'Valor a confirmar';
 }
+if (product.originalPrice && document.getElementById('price-original')) {
+  document.getElementById('price-original').textContent = text(product.originalPrice);
+}
 
 // Restrict product images to local assets, avoiding remote services and traversals.
 function localAsset(value) {
