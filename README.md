@@ -8,6 +8,7 @@ Monorepo estático para produtos digitais independentes. HTML, CSS e JavaScript 
 apps/
   experiencia-tecnologia/   # Primeira página, preservada
   industria-40/            # Coleção Afinal, identidade laranja
+  inteligencia-artificial/ # Volume 03, grafite e prata, capa real
 packages/
   config/                  # Build, verificação e servidor de desenvolvimento
   ui/                      # Primitivas CSS e ligação de checkout neutras
@@ -17,7 +18,7 @@ docs/
 tests/
 ```
 
-Cada app possui seu próprio `config.js`, `site.json`, HTML, CSS, JavaScript e assets. `packages/ui` não possui dados comerciais. O primeiro app mantém sua implementação original e não depende das primitivas visuais novas. O segundo utiliza as primitivas; o build copia o módulo compartilhado para sua própria saída. Nenhum app importa outro app.
+Cada app possui seu próprio `config.js`, `site.json`, HTML, CSS, JavaScript e assets. `packages/ui` não possui dados comerciais. O primeiro app mantém sua implementação original e não depende das primitivas visuais novas. Os apps da Coleção Afinal utilizam as primitivas; o build copia o módulo compartilhado para sua própria saída. Nenhum app importa outro app.
 
 ## Ferramentas
 
@@ -29,13 +30,15 @@ pnpm check
 pnpm test
 pnpm build:experiencia
 pnpm build:industria
+pnpm build:ia
 ```
 
-Cada comando individual gera **somente** o `dist/` da aplicação selecionada. `pnpm build` gera ambos. Não há validação de credenciais, checkout ou assets de outro produto durante um build individual.
+Cada comando individual gera **somente** o `dist/` da aplicação selecionada. `pnpm build` gera os três. Não há validação de credenciais, checkout ou assets de outro produto durante um build individual.
 
 ```sh
 pnpm dev:experiencia  # Porta 8100, recompila alterações
 pnpm dev:industria   # Porta 8101, recompila alterações
+pnpm dev:ia          # Porta 8102, recompila alterações
 # Porta alternativa:
 pnpm --filter @dobraverse/industria-40 dev --port 8201
 ```
@@ -48,9 +51,11 @@ Os servidores locais servem apenas `dist/`, sem listagem de diretórios. Reinici
 
 ```sh
 CHROMIUM_PATH=/usr/bin/chromium pnpm test:browser
+# Somente a nova aplicação de IA:
+BROWSER_APPS=ia CHROMIUM_PATH=/usr/bin/chromium pnpm test:browser
 ```
 
-Opcionalmente use `SCREENSHOT_DIR` para salvar screenshots fora do repositório. O runner inicia e encerra seus próprios servidores em portas disponíveis. Verifica 320, 390, 768 e 1440 pixels, imagens, FAQ, isolamento comercial, checkout, configuração de capa/prévias/sumário e movimento reduzido. Os dados de teste são temporários e não são salvos nos produtos.
+Opcionalmente use `SCREENSHOT_DIR` para salvar screenshots fora do repositório. O filtro `BROWSER_APPS` aceita `experiencia`, `industria` e `ia`, separados por vírgula; sem filtro, verifica todos. O runner inicia e encerra seus próprios servidores em portas disponíveis. Verifica 320, 390, 768 e 1440 pixels, imagens, FAQ, isolamento comercial, checkout, configuração de capa/prévias/sumário, UTMs da IA e movimento reduzido. Os dados de teste são temporários e não são salvos nos produtos.
 
 ## Produtos e pendências
 
@@ -60,11 +65,19 @@ Código e assets originais em `apps/experiencia-tecnologia`. Checkout, preço, a
 
 ### Afinal, o que é Indústria 4.0?
 
-Configuração independente em `apps/industria-40/config.js`. Checkout exclusivo da Kiwify, sem links inventados. Preço e informações não fornecidas permanecem em branco. Os links comerciais são indisponíveis enquanto faltar um checkout HTTPS válido da Kiwify.
+Configuração independente em `apps/industria-40/config.js`. As atualizações recentes do próprio repositório adicionaram a capa oficial, quatro prévias, banners, kit criativo e uma oferta configurada. Esses arquivos e dados comerciais foram preservados nesta entrega. Os 12 capítulos continuam organizados em quatro grupos temáticos. Consulte a configuração desse produto antes de publicar; o checkout ainda possui placeholder.
 
-**Materiais ainda não fornecidos:** capa oficial laranja e imagens reais de páginas internas. Os 12 títulos de capítulos foram fornecidos pelo usuário e estão organizados em quatro grupos temáticos. A composição tipográfica está claramente identificada como editorial, não como capa oficial. Nenhuma página interna ou capítulo foi inventado. Preencha `cover` e `previewImages` com os materiais reais. O sumário só aparece quando existem 12 números únicos, de 1 a 12, com títulos preenchidos. Confirme o formato do arquivo antes da publicação. A página não deve ser anunciada como comercialmente finalizada antes dessas confirmações.
+A suíte completa detecta um problema anterior à app IA: o SVG `.hero-arcs-bg` ultrapassa a borda em 10 pixels nas telas de 320 e 390 pixels. A regra vem do commit `029fea0`; esta entrega não modifica a página anterior.
 
 Para Open Graph com imagem, preencha `image` em `site.json` com o caminho da capa oficial. Antes da publicação, informe `SITE_URL` no build para produzir URL canônica, `og:url` e imagem absoluta. Domínios não são presumidos.
+
+### Afinal, vale a pena estudar Inteligência Artificial?
+
+Volume 03, integrado em `apps/inteligencia-artificial`, com identidade grafite/prata. Usa a capa original extraída do PDF, três prévias reais, os 12 capítulos confirmados e sete ferramentas práticas. O PDF completo permanece fora da pasta pública. O briefing e o PDF confirmam os personagens fictícios e o caráter reflexivo do conteúdo.
+
+`config.js` centraliza nome, checkout Kiwify, preço, capa, autoria, contato e links. Checkout e preço permanecem com placeholders; compra desativada acessivelmente até configurar a URL real. Não há backend nem rastreadores. UTMs são encaminhadas por uma lista restrita, de modo opcional; evento local de clique não é compra.
+
+A arte Open Graph está em `assets/og-ia.png`, 1200×630. Este app declara `socialImage` e `seoFiles` em `site.json`: com `SITE_URL` real, o build gera canonical, OG/Twitter completos, robots e sitemap. Sem domínio, não inventa URLs. As extensões de SEO são opcionais e não mudam os metadados dos apps anteriores. Veja o README específico para configuração e pendências.
 
 ## Compatibilidade com a primeira publicação
 
@@ -78,7 +91,7 @@ Os testes de migração comparam a primeira aplicação com os arquivos legados 
 
 - pnpm Workspaces para tarefas e dependências locais.
 - Sem mudança de framework: o projeto original não usa framework.
-- Sem Turborepo: dois builds que apenas copiam arquivos não precisam de cache ou grafo adicional. Pode ser adotado se as tarefas crescerem.
+- Sem Turborepo: três builds que apenas copiam arquivos não precisam de cache ou grafo adicional. Pode ser adotado se as tarefas crescerem.
 - Sem conversão para TypeScript: o código original e as páginas continuam JavaScript nativo. TypeScript pode entrar em ferramentas ou componentes que realmente o exijam.
 - `.editorconfig` compartilha convenções de formatação. `pnpm check` valida sintaxe JavaScript, JSON e estrutura HTML básica; não é um linter de estilo completo.
 - Compartilhamento limitado a layout/interação acessível e infraestrutura. Não há CMS, catálogo automático ou novos volumes implementados.

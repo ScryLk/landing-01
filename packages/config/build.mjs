@@ -31,20 +31,52 @@ export async function build(app = process.cwd(), output = path.join(app, 'dist')
       base = new URL(publicUrl.endsWith('/') ? publicUrl : `${publicUrl}/`);
       if (base.protocol !== 'https:') throw new Error('SITE_URL precisa usar HTTPS.');
     }
+    // New social metadata is opt-in, so existing applications keep their output.
+    const socialImage = site.socialImage ?? '';
+    if (typeof socialImage !== 'string' || (socialImage && (!socialImage.startsWith('assets/') ||
+      /[\\?#\0]/.test(socialImage) || socialImage.split('/').some(part => !part || part === '.' || part === '..')))) {
+      throw new Error('socialImage precisa indicar um arquivo local dentro de assets/.');
+    }
+    for (const dimension of ['socialImageWidth', 'socialImageHeight']) {
+      if (site[dimension] !== undefined && (!socialImage || !Number.isSafeInteger(site[dimension]) || site[dimension] <= 0)) {
+        throw new Error(`${dimension} precisa ser um inteiro positivo com socialImage definido.`);
+      }
+    }
+    if (socialImage && !(await stat(path.join(staging, socialImage))).isFile()) {
+      throw new Error('socialImage precisa indicar um arquivo.');
+    }
+    const image = socialImage || site.image;
     const meta = [
       `<meta property="og:type" content="website">`,
       `<meta property="og:locale" content="pt_BR">`,
       `<meta property="og:title" content="${escape(site.title)}">`,
       `<meta property="og:description" content="${escape(site.description)}">`,
-      `<meta name="twitter:card" content="${site.image && base ? 'summary_large_image' : 'summary'}">`
+      `<meta name="twitter:card" content="${image && base ? 'summary_large_image' : 'summary'}">`
     ];
+    if (socialImage) {
+      meta.push(`<meta name="twitter:title" content="${escape(site.title)}">`);
+      meta.push(`<meta name="twitter:description" content="${escape(site.description)}">`);
+    }
     if (base) {
       meta.push(`<link rel="canonical" href="${escape(base.href)}">`, `<meta property="og:url" content="${escape(base.href)}">`);
-      if (site.image) {
-        await stat(path.join(staging, site.image));
-        meta.push(`<meta property="og:image" content="${escape(new URL(site.image, base).href)}">`);
-        meta.push(`<meta property="og:image:alt" content="${escape(site.title)}">`);
+      if (image) {
+        await stat(path.join(staging, image));
+        const imageUrl = escape(new URL(image, base).href);
+        const imageAlt = escape(socialImage ? site.socialImageAlt || site.title : site.title);
+        meta.push(`<meta property="og:image" content="${imageUrl}">`);
+        meta.push(`<meta property="og:image:alt" content="${imageAlt}">`);
+        if (socialImage) {
+          for (const [key, property] of [['socialImageWidth', 'width'], ['socialImageHeight', 'height']]) {
+            if (site[key] !== undefined) meta.push(`<meta property="og:image:${property}" content="${site[key]}">`);
+          }
+          meta.push(`<meta name="twitter:image" content="${imageUrl}">`);
+          meta.push(`<meta name="twitter:image:alt" content="${imageAlt}">`);
+        }
       }
+    }
+    if (site.seoFiles === true && base) {
+      await writeFile(path.join(staging, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${new URL('sitemap.xml', base).href}\n`);
+      await writeFile(path.join(staging, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${escape(base.href)}</loc></url>\n</urlset>\n`);
     }
     let html = await readFile(path.join(staging, 'index.html'), 'utf8');
     html = html.replace('</head>', `${meta.join('\n')}\n</head>`);

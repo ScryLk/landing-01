@@ -17,7 +17,7 @@ test('Migração preserva os arquivos da primeira página e a entrada legada', a
   );
 });
 
-for (const name of ['experiencia-tecnologia', 'industria-40']) {
+for (const name of ['experiencia-tecnologia', 'industria-40', 'inteligencia-artificial']) {
   test(`Build ${name} funciona sem a outra aplicação e publica só arquivos públicos`, async t => {
     const temporary = await mkdtemp(path.join(tmpdir(), 'dobraverse-test-'));
     t.after(() => rm(temporary, {recursive:true,force:true}));
@@ -28,8 +28,8 @@ for (const name of ['experiencia-tecnologia', 'industria-40']) {
     const siteUrl = `https://example.test/${name}/`;
     await build(app, path.join(app, 'dist'), {siteUrl});
     const entries = await readdir(path.join(app,'dist'));
-    assert.deepEqual(entries.sort(), (name==='industria-40'
-      ? ['app.js','assets','config.js','index.html','shared','styles.css']
+    assert.deepEqual(entries.sort(), (name!=='experiencia-tecnologia'
+      ? (name==='inteligencia-artificial' ? ['app.js','assets','config.js','index.html','robots.txt','shared','sitemap.xml','styles.css'] : ['app.js','assets','config.js','index.html','shared','styles.css'])
       : ['app.js','assets','config.js','index.html','styles.css']).sort());
     assert.deepEqual(await readFile(path.join(app,'dist/config.js')), originalConfig);
     const html = await readFile(path.join(app,'dist/index.html'),'utf8');
@@ -39,7 +39,8 @@ for (const name of ['experiencia-tecnologia', 'industria-40']) {
       assert.ok(html.includes(`content="${siteUrl}assets/capa.webp"`));
       assert.deepEqual(await readFile(path.join(app,'dist/styles.css')), await readFile(path.join(app,'styles.css')));
     } else {
-      assert.ok(!html.includes('property="og:image"'), 'Não inventar imagem de capa');
+      if(name==='industria-40') assert.ok(!html.includes('property="og:image"'), 'Não inventar imagem de capa');
+      else assert.ok(html.includes(`${siteUrl}assets/og-ia.png`));
       const css=await readFile(path.join(app,'dist/styles.css'),'utf8');
       assert.ok(css.includes('Primitives share layout'));
       assert.ok(!css.includes('#08bdf1'));

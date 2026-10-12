@@ -6,6 +6,7 @@ Publique apenas o `dist/` de cada aplicação. O repositório, `node_modules`, f
 | --- | --- | --- | --- |
 | Experiência à Tecnologia | `apps/experiencia-tecnologia` | `pnpm build:experiencia` | `apps/experiencia-tecnologia/dist` |
 | Indústria 4.0 | `apps/industria-40` | `pnpm build:industria` | `apps/industria-40/dist` |
+| Inteligência Artificial | `apps/inteligencia-artificial` | `pnpm build:ia` | `apps/inteligencia-artificial/dist` |
 
 Instalação: `pnpm install --frozen-lockfile`. Não há dependências npm de produção. O workspace tem apenas links locais. Se o ambiente não permitir o diretório de dados padrão do pnpm, configure `XDG_DATA_HOME`/`XDG_CACHE_HOME` em caminhos graváveis e `--store-dir` local, sem mudar as dependências ou o lockfile.
 
@@ -16,13 +17,14 @@ Informe a URL real do produto ao executar seu build. Exemplo **ilustrativo**, n�
 ```sh
 SITE_URL=https://seu-dominio.example/experiencia-tecnologia/ pnpm build:experiencia
 SITE_URL=https://outro-dominio.example/ pnpm build:industria
+SITE_URL=https://seu-dominio.example/inteligencia-artificial/ pnpm build:ia
 ```
 
 Sem `SITE_URL`, o build inclui título, descrição e locale Open Graph, mas não inventa canonical, URL pública ou imagem absoluta. Os metadados vêm de `site.json` de cada app. Mantenha título/descrição de `index.html` e `site.json` alinhados. `config.js` controla dados comerciais, não o domínio de hospedagem.
 
 ## VPS
 
-Não foi realizado deploy na VPS: o host, domínio, acesso SSH e configuração do servidor não estão disponíveis nesta tarefa.
+Não foi realizado deploy na VPS nesta tarefa. O repositório contém `OPERACAO.md`, `deploy-ebook.sh` e `setup-domain-ssl.sh` de uma configuração anterior; foram preservados. Não há acesso SSH validado nesta tarefa, e o domínio do produto de IA ainda precisa ser confirmado.
 
 1. Mantenha o checkout Git fora do diretório público.
 2. Instale os workspaces e execute apenas o build do produto desejado.
@@ -55,7 +57,7 @@ Configure um projeto de deploy por app, ligado ao mesmo repositório. Não remov
 
 Opção recomendada para este monorepo: diretório raiz do projeto de deploy = raiz do repositório; preset `Other`; instalação `pnpm install --frozen-lockfile`; build e saída conforme a tabela. Configure `SITE_URL` individualmente em cada projeto.
 
-Se o provedor trabalhar com raiz do app, use `apps/<produto>`, instalação na raiz do workspace, build `pnpm build` dentro do app e saída `dist`. Habilite a inclusão de arquivos fora da raiz do app para acessar `packages/config` e, no segundo produto, `packages/ui`. Não faça um checkout isolado do app sem os pacotes compartilhados.
+Se o provedor trabalhar com raiz do app, use `apps/<produto>`, instalação na raiz do workspace, build `pnpm build` dentro do app e saída `dist`. Habilite a inclusão de arquivos fora da raiz do app para acessar `packages/config` e, nos produtos da Coleção Afinal, `packages/ui`. Não faça um checkout isolado do app sem os pacotes compartilhados.
 
 Para um deploy antigo que servia a raiz sem build, revise essas configurações antes de migrar. A entrada legada continua no Git para manter a compatibilidade; a remoção futura é uma etapa separada.
 
@@ -71,3 +73,17 @@ Para um deploy antigo que servia a raiz sem build, revise essas configurações 
 - Confirmar que os outros produtos e sites continuam funcionando.
 
 Atualização e rollback devem usar releases separadas por produto. Não há webhook, GitHub Actions ou automação de produção configurada nesta tarefa.
+
+## SEO e campanhas do volume de IA
+
+O app de IA declara a composição oficial `assets/og-ia.png` (1200×630) e `seoFiles: true`. Com `SITE_URL` HTTPS confirmado, publica robots/sitemap e tags OG/Twitter com URLs absolutas. Se o produto estiver em uma subpasta, o robots.txt dessa subpasta não substitui o robots da raiz do domínio; inclua a referência do sitemap do produto no arquivo do domínio existente. Não sobrescreva a política de outros sites.
+
+UTMs podem acompanhar o visitante até o checkout. Não há Meta Pixel, IDs fictícios, cookies, armazenamento local ou analytics instalados. A venda acontece na Kiwify; um evento de clique não representa uma compra. Configure mensuração futura somente com valores reais e privacidade adequada.
+
+Para configurar este produto, consulte `apps/inteligencia-artificial/README.md`. Capa, prévias, capítulos e caderno foram conferidos no PDF. Permanecem pendentes checkout, preço, autoria pessoal, contato público, políticas comerciais e domínio de publicação. Nenhum servidor ou domínio foi alterado durante a implementação.
+
+### Script de deploy já existente
+
+`deploy-ebook.sh` já aceita novos slugs pelo caso genérico e encontra `apps/inteligencia-artificial`, com build via filtro do pnpm. Entretanto, esse caso pressupõe o subdomínio `<slug>.dobraverse.io`; isso não confirma DNS ou hospedagem do novo volume. Antes de executá-lo na VPS, confirme o domínio desejado e a configuração `SITE_URL` do script. Alternativamente, gere o build com `SITE_URL` explícito e publique seu `dist/` usando o processo de releases existente.
+
+A configuração comercial persistente desse slug será `/var/www/ebooks/shared/inteligencia-artificial/config.js`, conforme o script existente. Não execute `setup-domain-ssl.sh` com os parâmetros padrão de outro produto. Nenhum desses scripts foi executado nesta tarefa.
