@@ -1339,7 +1339,8 @@ a {
   .hero-visual {
     max-width:440px;
     width:100%;
-    margin:auto
+    margin:auto;
+    overflow:hidden
   }
 
   .editorial-art {
@@ -2011,8 +2012,9 @@ a {
   .previews {
     grid-template-columns: 1fr;
   }
-  .hero-arcs-bg {
-    display: none;
+  .hero-arcs-bg,
+  [data-cover-placeholder][hidden] ~ .hero-arcs-bg {
+    display: none !important;
   }
   .hero-cover-tag {
     right: 0;
