@@ -426,3 +426,259 @@ a { text-underline-offset: 5px; }
 
 @keyframes cover-arrival { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 .hero-visual { animation: cover-arrival .45s ease-out both; }
+
+/* ==============================================================
+   BANNER PROMOCIONAL OFICIAL (VOL. 03 - IA)
+   ============================================================== */
+.banner-promo {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.banner-promo-card {
+  background: #1A1D24;
+  color: #F7F6F2;
+  border: 1px solid #363E4F;
+  border-radius: 4px;
+  padding: 44px 40px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.banner-promo-tag {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #BFC3C7;
+  margin-bottom: 12px;
+}
+
+.banner-promo-copy h2 {
+  font-size: clamp(26px, 3.2vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.banner-promo-copy h2 span {
+  color: #BFC3C7;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+.banner-promo-lead {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #CBD5E1;
+  font-weight: 400;
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.banner-promo-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.banner-promo-badges span {
+  background: #0E1015;
+  color: #E2E8F0;
+  border: 1px solid #2B3344;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 12px;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+}
+
+.banner-promo-badges .badge-discount-highlight {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border-color: rgba(34, 197, 94, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.banner-promo-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.banner-promo-media picture {
+  display: block;
+  width: 100%;
+}
+
+.banner-promo-media img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #363E4F;
+  box-shadow: 10px 10px 0 #0E1015;
+  background: #111;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ==============================================================
+   SHOWCASE DE MOCKUPS E DISPOSITIVOS DE LEITURA
+   ============================================================== */
+.devices-showcase {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid #3A3A3A;
+}
+
+.devices-header {
+  margin-bottom: 32px;
+}
+
+.devices-tag {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #BFC3C7;
+  margin-bottom: 10px;
+}
+
+.devices-header h3 {
+  font-size: 26px;
+  letter-spacing: -0.8px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.devices-header p {
+  font-size: 15px;
+  color: #A3A3A3;
+  max-width: 640px;
+}
+
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.device-card {
+  background: #1C1E24;
+  border: 1px solid #2D3340;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  border-color: #BFC3C7;
+}
+
+.device-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #111317;
+  border-bottom: 1px solid #2D3340;
+}
+
+.device-card figcaption {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.device-card figcaption strong {
+  font-size: 15px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.device-card figcaption span {
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.45;
+}
+
+/* ==============================================================
+   FOOTER LINKS & KIT PUBLICITÁRIO
+   ============================================================== */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.kit-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #BFC3C7;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kit-link:hover {
+  opacity: 1;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* ==============================================================
+   RESPONSIVIDADE DOS BANNERS E MOCKUPS
+   ============================================================== */
+@media (max-width: 900px) {
+  .devices-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .banner-promo-card {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-promo {
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  .banner-promo-card {
+    padding: 24px 18px;
+  }
+  .banner-promo-media img {
+    box-shadow: 6px 6px 0 #0E1015;
+  }
+  .devices-showcase {
+    margin-top: 36px;
+    padding-top: 32px;
+  }
+  .devices-header h3 {
+    font-size: 22px;
+  }
+}
+

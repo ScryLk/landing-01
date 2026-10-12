@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Publicitário Premium Completo — Volume 03: Inteligência Artificial</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --grafite: #252525;
+  --ink: #111111;
+  --gray-mid: #737373;
+  --silver: #BFC3C7;
+  --gray-light: #E8E8E8;
+  --offwhite: #F7F6F2;
+  --white: #FFFFFF;
+  --bg-dark: #0A0C0F;
+  --card-dark: #141720;
+  --border-dark: #222836;
+  --text-muted: #8E9BAE;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-dark);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* TOPBAR */
+.kit-header {
+  background: #0F1218;
+  border-bottom: 1px solid var(--border-dark);
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.header-inner {
+  max-width: 1750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  background: var(--silver);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 11px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn-nav {
+  background: #1A1F2C;
+  color: #fff;
+  border: 1px solid #2B3344;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-nav:hover {
+  background: #252D3E;
+  border-color: var(--silver);
+  color: var(--silver);
+}
+.btn-nav.primary {
+  background: var(--silver);
+  color: var(--ink);
+  border-color: var(--silver);
+  font-weight: 700;
+}
+.btn-nav.primary:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+/* FILTROS */
+.filters-bar {
+  background: #12151D;
+  border-bottom: 1px solid var(--border-dark);
+  padding: 14px 32px;
+}
+.filters-inner {
+  max-width: 1750px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+.pill {
+  background: #181D28;
+  border: 1px solid #262D3D;
+  color: #CBD5E1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pill:hover { background: #222938; color: #fff; }
+.pill.active {
+  background: var(--silver);
+  border-color: var(--silver);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* STATS */
+.stats-bar {
+  max-width: 1750px;
+  margin: 20px auto 10px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* CONTEÚDO */
+.kit-content {
+  max-width: 1750px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.group-section {
+  margin-top: 40px;
+}
+.group-header {
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.group-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.group-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: #1F2533;
+  color: var(--silver);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.group-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 28px;
+}
+.cards-grid.wide-grid {
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+}
+
+.piece-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.piece-card:hover {
+  border-color: #3B465C;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-top {
+  padding: 12px 18px;
+  background: #171B26;
+  border-bottom: 1px solid var(--border-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dim-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: #0E1015;
+  color: var(--silver);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-btn {
+  background: #232936;
+  border: none;
+  color: #CBD5E1;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-btn:hover { background: var(--silver); color: var(--ink); }
+
+.card-stage {
+  padding: 20px;
+  background: #090B0E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+  position: relative;
+}
+.card-stage img {
+  max-width: 100%;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  border-radius: 4px;
+}
+
+.card-bottom {
+  padding: 16px 18px;
+  background: #12151D;
+  border-top: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.copy-snippet {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #94A3B8;
+  background: #0B0D12;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #1E2432;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+}
+.card-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-dl {
+  background: #1F2533;
+  color: #CBD5E1;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s;
+}
+.btn-dl:hover {
+  background: var(--silver);
+  color: var(--ink);
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--silver);
+  color: var(--ink);
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+}
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .kit-header, .filters-bar, .kit-content, .stats-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="kit-header">
+  <div class="header-inner">
+    <div class="brand-group">
+      <div class="brand-mark">COLEÇÃO AFINAL</div>
+      <div>
+        <h1 class="brand-title">Kit Gráfico Publicitário Completo</h1>
+        <p class="brand-subtitle">Volume 03: Afinal, vale a pena estudar Inteligência Artificial? — Kit Premium</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="index.html" class="btn-nav">← Landing Page Oficial</a>
+      <a href="validacao-propostas.html" class="btn-nav">Propostas Iniciais</a>
+      <button class="btn-nav primary" onclick="copyAllCampaignContent()">✨ Copiar Todas as Copys e Legendas</button>
+    </div>
+  </div>
+</header>
+
+<!-- FILTROS -->
+<nav class="filters-bar" aria-label="Filtros por Grupo">
+  <div class="filters-inner" id="filterContainer">
+    <span class="filter-label">Filtrar Grupo:</span>
+    <button class="pill active" data-filter="all">Todas as Peças (21)</button>
+    <button class="pill" data-filter="g01">01 · Thumbnails Kiwify</button>
+    <button class="pill" data-filter="g02">02 · Mockups do E-book</button>
+    <button class="pill" data-filter="g03">03 · Anúncios para Feed</button>
+    <button class="pill" data-filter="g04">04 · Stories Promocionais</button>
+    <button class="pill" data-filter="g05">05 · Posts Educativos</button>
+    <button class="pill" data-filter="g06">06 · Banners Horizontais</button>
+    <button class="pill" data-filter="g07">07 · Landing Page</button>
+    <button class="pill" data-filter="g08">08 · Open Graph</button>
+  </div>
+</nav>
+
+<div class="stats-bar">
+  <div id="statusCounter">Exibindo todas as 21 artes em alta resolução (PNG)</div>
+  <div>Identidade: Grafite, Prata e Monocromático</div>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="kit-content">
+
+  <!-- ==============================================================
+       GRUPO 01: THUMBNAILS KIWIFY (1080 x 1080)
+       ============================================================== -->
+  <section class="group-section" data-group="g01">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 01</span>
+          Thumbnails Oficiais Kiwify & Vitrines (1080 × 1080)
+        </h2>
+        <p class="group-desc">Composições limpas e de alta legibilidade em pequenas escalas para catálogo, checkout e listagens da Kiwify.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- 01A -->
+      <article class="piece-card" data-group="g01">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Thumbnail Versão A · Capa Centralizada</span>
+          <button class="card-btn" onclick="copyCopy('T1_A')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/01-thumbnails/peca-01-thumbnail-a-capa-centralizada-1080x1080.png" alt="Thumbnail A">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">COMPOSIÇÃO: Capa oficial original centralizada com respiro editorial
+APLICAÇÃO: Checkout limpo e catálogo da Kiwify</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Versão A</span>
+            <a href="kit-publicitario/01-thumbnails/peca-01-thumbnail-a-capa-centralizada-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 01B -->
+      <article class="piece-card" data-group="g01">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Thumbnail Versão B · Mockup Perspectiva</span>
+          <button class="card-btn" onclick="copyCopy('T1_B')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/01-thumbnails/peca-01-thumbnail-b-mockup-perspectiva-1080x1080.png" alt="Thumbnail B">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: COLEÇÃO AFINAL // TECNOLOGIA · VOL. 03
+DESTAQUE: EDIÇÃO DIGITAL EM PDF · ACESSO IMEDIATO NA KIWIFY ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Versão B</span>
+            <a href="kit-publicitario/01-thumbnails/peca-01-thumbnail-b-mockup-perspectiva-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 01C -->
+      <article class="piece-card" data-group="g01">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Thumbnail Versão C · Formas Geométricas</span>
+          <button class="card-btn" onclick="copyCopy('T1_C')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/01-thumbnails/peca-01-thumbnail-c-formas-geometricas-1080x1080.png" alt="Thumbnail C">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: AFINAL, VALE A PENA ESTUDAR IA?
+DESTAQUE: Fundo prata com arcos concêntricos e nós de circuito</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Versão C</span>
+            <a href="kit-publicitario/01-thumbnails/peca-01-thumbnail-c-formas-geometricas-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 02: MOCKUPS DO PRODUTO (1080 x 1080)
+       ============================================================== -->
+  <section class="group-section" data-group="g02">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 02</span>
+          Mockups Premium do E-book (1080 × 1080)
+        </h2>
+        <p class="group-desc">Apresentações tridimensionais sofisticadas que valorizam o produto digital sem simular entregas físicas postais.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- M1 -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 1 · Perspectiva 3D Discreta</span>
+          <button class="card-btn" onclick="copyCopy('M1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups/peca-02-mockup-1-livro-perspectiva-1080x1080.png" alt="Mockup 1">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: MOCKUP EDITORIAL 3D // TECNOLOGIA · VOL. 03
+FORMATO: Digital em PDF · Compatível com computador, tablet e celular</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Hero & LP</span>
+            <a href="kit-publicitario/02-mockups/peca-02-mockup-1-livro-perspectiva-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- M2 -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 2 · Tablet Editorial</span>
+          <button class="card-btn" onclick="copyCopy('M2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups/peca-02-mockup-2-tablet-editorial-1080x1080.png" alt="Mockup 2 Tablet">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: LEITURA DIGITAL ACESSÍVEL
+SUB: Diagramação elegante e visualização em tablets e telas retina</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Dark Editorial</span>
+            <a href="kit-publicitario/02-mockups/peca-02-mockup-2-tablet-editorial-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- M3 -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 3 · Edição Digital Completa</span>
+          <button class="card-btn" onclick="copyCopy('M3')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups/peca-02-mockup-3-edicao-digital-multitela-1080x1080.png" alt="Mockup 3">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: CONTEÚDO DIGITAL COMPLETO
+CONTEÚDO: 12 capítulos de investigação, 7 ferramentas e exercícios</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Prova de Valor</span>
+            <a href="kit-publicitario/02-mockups/peca-02-mockup-3-edicao-digital-multitela-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 03: ANÚNCIOS PARA FEED
+       ============================================================== -->
+  <section class="group-section" data-group="g03">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 03</span>
+          Criativos de Anúncios para Feed (Meta Ads & Redes Sociais)
+        </h2>
+        <p class="group-desc">Peças nos formatos 1080 × 1080 e 1080 × 1350 trabalhando os ângulos de reflexão, escolhas acadêmicas, prompt engineering e produto.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- 03 Sq -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Peça 03 · Reflexão Feed Quadrado</span>
+          <button class="card-btn" onclick="copyCopy('P03_SQ')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-03-reflexao-feed-quadrado-1080x1080.png" alt="Peça 03 Quadrado">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR?
+SUB: OU APENAS PARA NÃO FICAR PARA TRÁS?
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Feed 1:1</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-03-reflexao-feed-quadrado-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Vert -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 03 · Reflexão Feed Vertical</span>
+          <button class="card-btn" onclick="copyCopy('P03_V')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-03-reflexao-feed-vertical-1080x1350.png" alt="Peça 03 Vertical">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR?
+SUB: OU APENAS PARA NÃO FICAR PARA TRÁS?
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Feed 4:5 Principal</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-03-reflexao-feed-vertical-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 04 · Graduação ou Pós-Graduação</span>
+          <button class="card-btn" onclick="copyCopy('P04')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-04-graduacao-pos-ou-outro-1080x1350.png" alt="Peça 04">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: GRADUAÇÃO, PÓS OU OUTRO CAMINHO?
+SUB: Antes de decidir, entenda suas opções.
+CTA: DESCUBRA O LIVRO ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">3 Caminhos Visuais</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-04-graduacao-pos-ou-outro-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 05 · O Conhecimento Muda?</span>
+          <button class="card-btn" onclick="copyCopy('P05')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-05-o-conhecimento-muda-1080x1350.png" alt="Peça 05">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: A IA MUDA. O QUE VALE A PENA APRENDER?
+CONCEITO: Ferramentas passageiras vs Fundamentos sólidos
+CTA: SAIBA MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Contraste de Estruturas</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-05-o-conhecimento-muda-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 06 · Decisão Antes do Investimento</span>
+          <button class="card-btn" onclick="copyCopy('P06')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-06-decisao-antes-do-investimento-1080x1350.png" alt="Peça 06">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: ANTES DE INVESTIR EM UMA FORMAÇÃO, FAÇA AS PERGUNTAS CERTAS.
+SUB: Inteligência artificial, graduação, pós e carreira.
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Público de Educação Executiva</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-06-decisao-antes-do-investimento-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 07 · Prompt Engineering</span>
+          <button class="card-btn" onclick="copyCopy('P07')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-07-prompt-engineering-1080x1350.png" alt="Peça 07">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: E SE A FERRAMENTA SIMPLIFICAR AQUILO QUE VOCÊ ESTÁ ESTUDANDO?
+SUB: O que continuará sendo seu conhecimento?
+CTA: EXPLORE ESSA REFLEXÃO ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Evolução das Competências</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-07-prompt-engineering-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 08 · Apresentação do E-book</span>
+          <button class="card-btn" onclick="copyCopy('P08')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-anuncios-feed/peca-08-apresentacao-do-ebook-1080x1350.png" alt="Peça 08">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: AFINAL, VALE A PENA ESTUDAR INTELIGÊNCIA ARTIFICIAL?
+SUB: Uma leitura sobre tecnologia, formação e decisões profissionais.
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Mockup Hero 3D</span>
+            <a href="kit-publicitario/03-anuncios-feed/peca-08-apresentacao-do-ebook-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 04: STORIES (1080 x 1920)
+       ============================================================== -->
+  <section class="group-section" data-group="g04">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 04</span>
+          Sequência de Stories Promocionais (1080 × 1920)
+        </h2>
+        <p class="group-desc">Sequência em 4 atos (Identificação → Provocação → Reflexão → Produto com CTA) preservando zonas seguras do Instagram.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- Story 03 -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Peça 03 · Reflexão Vertical</span>
+          <button class="card-btn" onclick="copyCopy('S03')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-stories/peca-03-reflexao-stories-1080x1920.png" alt="Story 03">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR OU APENAS PARA NÃO FICAR PARA TRÁS?
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Story Standalone</span>
+            <a href="kit-publicitario/04-stories/peca-03-reflexao-stories-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 1 -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 1 · Identificação (1/4)</span>
+          <button class="card-btn" onclick="copyCopy('S1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-stories/peca-13-story-1-identificacao-1080x1920.png" alt="Story 1">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: A INTELIGÊNCIA ARTIFICIAL ESTÁ MUDANDO TUDO?
+Novos modelos, notícias diárias e aceleração constante.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Ato 1: Gancho</span>
+            <a href="kit-publicitario/04-stories/peca-13-story-1-identificacao-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 2 -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 2 · Provocação (2/4)</span>
+          <button class="card-btn" onclick="copyCopy('S2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-stories/peca-13-story-2-provocacao-1080x1920.png" alt="Story 2">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: MAS VOCÊ SABE POR QUE QUER ESTUDÁ-LA?
+Para evoluir de verdade ou para aliviar o medo?</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Ato 2: Questionamento</span>
+            <a href="kit-publicitario/04-stories/peca-13-story-2-provocacao-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 3 -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 3 · Reflexão (3/4)</span>
+          <button class="card-btn" onclick="copyCopy('S3')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-stories/peca-13-story-3-reflexao-1080x1920.png" alt="Story 3">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: GRADUAÇÃO, PÓS, CURSOS OU PROJETOS:
+Qual caminho faz sentido para o seu momento?</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Ato 3: Decisão</span>
+            <a href="kit-publicitario/04-stories/peca-13-story-3-reflexao-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 4 -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 4 · Produto & CTA (4/4)</span>
+          <button class="card-btn" onclick="copyCopy('S4')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-stories/peca-13-story-4-produto-1080x1920.png" alt="Story 4">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: AFINAL, VALE A PENA ESTUDAR INTELIGÊNCIA ARTIFICIAL?
+CTA: SAIBA MAIS ↗ (Área livre para sticker de link)</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Ato 4: Conversão</span>
+            <a href="kit-publicitario/04-stories/peca-13-story-4-produto-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 05: POSTS EDUCATIVOS (1080 x 1080)
+       ============================================================== -->
+  <section class="group-section" data-group="g05">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 05</span>
+          Posts Educativos para Social Media (com Legendas)
+        </h2>
+        <p class="group-desc">4 publicações conceituais em 1080 × 1080 px acompanhadas de legendas aprofundadas para Instagram e LinkedIn.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- Post A -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post A · Toda Mudança Exige Formação?</span>
+          <button class="card-btn" onclick="copyLegend('PostA')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-posts-educativos/peca-12-post-a-nova-formacao-1080x1080.png" alt="Post A">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: TODA MUDANÇA EXIGE UMA NOVA FORMAÇÃO?
+REFLEXÃO: Marketing educacional e a ilusão de colecionar diplomas.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Post Educativo 1</span>
+            <a href="kit-publicitario/05-posts-educativos/peca-12-post-a-nova-formacao-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post B -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post B · Ferramenta vs Área</span>
+          <button class="card-btn" onclick="copyLegend('PostB')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-posts-educativos/peca-12-post-b-ferramenta-vs-area-1080x1080.png" alt="Post B">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: APRENDER UMA FERRAMENTA É O MESMO QUE DOMINAR UMA ÁREA?
+REFLEXÃO: Operador de ferramenta vs Profissional de fundamentos.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Post Educativo 2</span>
+            <a href="kit-publicitario/05-posts-educativos/peca-12-post-b-ferramenta-vs-area-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post C -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post C · Pós-graduação</span>
+          <button class="card-btn" onclick="copyLegend('PostC')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-posts-educativos/peca-12-post-c-pos-graduacao-problema-1080x1080.png" alt="Post C">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: UMA PÓS-GRADUAÇÃO RESOLVE QUAL PROBLEMA DA SUA CARREIRA?
+REFLEXÃO: Checklist com 3 perguntas antes do investimento.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Post Educativo 3</span>
+            <a href="kit-publicitario/05-posts-educativos/peca-12-post-c-pos-graduacao-problema-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post D -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post D · Desenvolver ou Utilizar?</span>
+          <button class="card-btn" onclick="copyLegend('PostD')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-posts-educativos/peca-12-post-d-desenvolver-ou-utilizar-1080x1080.png" alt="Post D">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: VOCÊ QUER DESENVOLVER IA OU APENAS UTILIZÁ-LA?
+REFLEXÃO: A rota matemática vs a rota de aplicação de negócios.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Post Educativo 4</span>
+            <a href="kit-publicitario/05-posts-educativos/peca-12-post-d-desenvolver-ou-utilizar-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 06: BANNERS HORIZONTAIS (1920 x 1080)
+       ============================================================== -->
+  <section class="group-section" data-group="g06">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 06</span>
+          Banners Promocionais Horizontais (1920 × 1080)
+        </h2>
+        <p class="group-desc">Formatos Full HD 1080p para apresentações comerciais, banners de topo, YouTube e mídia exterior digital.</p>
+      </div>
+    </div>
+    <div class="cards-grid wide-grid">
+      <!-- Promo Grafite -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1920 × 1080 px</span>
+          <span class="card-name">Peça 10 · Banner Grafite Dominante</span>
+          <button class="card-btn" onclick="copyCopy('BH_G')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-horizontais/peca-10-banner-horizontal-grafite-1920x1080.png" alt="Banner Grafite">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: O FUTURO ESTÁ MUDANDO.
+SUB: Mas por que você está correndo atrás dele?
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Versão Grafite Escuro</span>
+            <a href="kit-publicitario/06-banners-horizontais/peca-10-banner-horizontal-grafite-1920x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Promo Prata -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1920 × 1080 px</span>
+          <span class="card-name">Peça 10 · Banner Prata / Cinza Claro</span>
+          <button class="card-btn" onclick="copyCopy('BH_S')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-horizontais/peca-10-banner-horizontal-prata-1920x1080.png" alt="Banner Prata">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: O FUTURO ESTÁ MUDANDO.
+SUB: Mas por que você está correndo atrás dele?
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Versão Prata Editorial</span>
+            <a href="kit-publicitario/06-banners-horizontais/peca-10-banner-horizontal-prata-1920x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 07: LANDING PAGE
+       ============================================================== -->
+  <section class="group-section" data-group="g07">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 07</span>
+          Banners para Landing Page (Desktop 1600 × 900 & Mobile)
+        </h2>
+        <p class="group-desc">Composição com 60% de espaço livre à esquerda para aplicação de textos e botões em HTML/CSS nativos.</p>
+      </div>
+    </div>
+    <div class="cards-grid wide-grid">
+      <!-- LP Desktop -->
+      <article class="piece-card" data-group="g07">
+        <div class="card-top">
+          <span class="dim-pill">1600 × 900 px</span>
+          <span class="card-name">Peça 09 · Banner Hero LP Desktop</span>
+          <button class="card-btn" onclick="copyCopy('LP_D')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/07-landing-page/peca-09-banner-lp-desktop-1600x900.png" alt="LP Desktop">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">ÁREA HTML RESERVADA: 60% à esquerda para títulos e CTA da página
+CAPA HERO: 40% à direita com sombra pura e arcos de circuito</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Hero Desktop 16:9</span>
+            <a href="kit-publicitario/07-landing-page/peca-09-banner-lp-desktop-1600x900.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- LP Mobile -->
+      <article class="piece-card" data-group="g07">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 09 · Banner Hero LP Mobile</span>
+          <button class="card-btn" onclick="copyCopy('LP_M')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/07-landing-page/peca-09-banner-lp-mobile-1080x1350.png" alt="LP Mobile">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">COMPOSIÇÃO: Enquadramento vertical para smartphones e tablets.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Mobile Hero</span>
+            <a href="kit-publicitario/07-landing-page/peca-09-banner-lp-mobile-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 08: OPEN GRAPH (1200 x 630)
+       ============================================================== -->
+  <section class="group-section" data-group="g08">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 08</span>
+          Compartilhamento Social e Open Graph (1200 × 630)
+        </h2>
+        <p class="group-desc">Card de compartilhamento para prévias no WhatsApp, LinkedIn, Twitter e Meta com áreas centrais protegidas de cortes.</p>
+      </div>
+    </div>
+    <div class="cards-grid wide-grid">
+      <article class="piece-card" data-group="g08">
+        <div class="card-top">
+          <span class="dim-pill">1200 × 630 px</span>
+          <span class="card-name">Peça 11 · Card Open Graph / WhatsApp</span>
+          <button class="card-btn" onclick="copyCopy('OG')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/08-open-graph/peca-11-compartilhamento-og-1200x630.png" alt="Open Graph">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: COLEÇÃO AFINAL // TECNOLOGIA · VOL. 03
+TÍTULO: AFINAL, VALE A PENA ESTUDAR IA?
+SUB: Você está estudando para evoluir ou apenas para não ficar para trás?</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">WhatsApp & LinkedIn</span>
+            <a href="kit-publicitario/08-open-graph/peca-11-compartilhamento-og-1200x630.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast" id="toastMessage">Texto copiado para a área de transferência!</div>
+
+<script>
+// FILTROS
+const filterContainer = document.getElementById('filterContainer');
+const sections = document.querySelectorAll('.group-section');
+const statusCounter = document.getElementById('statusCounter');
+
+filterContainer.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('pill')) return;
+  filterContainer.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  const group = e.target.dataset.filter;
+
+  let visibleCount = 0;
+  sections.forEach(sec => {
+    if (group === 'all' || sec.dataset.group === group) {
+      sec.style.display = 'block';
+      visibleCount += sec.querySelectorAll('.piece-card').length;
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+  statusCounter.textContent = `Exibindo ${visibleCount} peças no filtro selecionado`;
+});
+
+// TOAST
+function showToast(msg) {
+  const t = document.getElementById('toastMessage');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// TEXTOS
+const copies = {
+  'T1_A': `Afinal, vale a pena estudar Inteligência Artificial? — Coleção Afinal (Vol. 03)`,
+  'T1_B': `COLEÇÃO AFINAL · TECNOLOGIA · VOL. 03\nAfinal, vale a pena estudar Inteligência Artificial?\nEDIÇÃO DIGITAL EM PDF · ACESSO IMEDIATO NA KIWIFY ↗`,
+  'T1_C': `AFINAL, VALE A PENA ESTUDAR IA? // Coleção Afinal Vol. 03\nPublicação Digital ↗`,
+  'M1': `E-book em PDF: Afinal, vale a pena estudar Inteligência Artificial?\nCompatível com computador, tablet e celular.`,
+  'M2': `Leitura Digital Acessível: Afinal, vale a pena estudar Inteligência Artificial?\nDiagramação limpa e leitura em qualquer tela.`,
+  'M3': `Conteúdo Digital Completo: 12 capítulos, 7 ferramentas e exercícios práticos de decisão.`,
+  'P03_SQ': `HEADLINE: VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR?\nSUBHEADLINE: OU APENAS PARA NÃO FICAR PARA TRÁS?\nCTA: CONHEÇA O E-BOOK ↗`,
+  'P03_V': `HEADLINE: VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR?\nSUBHEADLINE: OU APENAS PARA NÃO FICAR PARA TRÁS?\nAPOIO: Uma reflexão sobre inteligência artificial, formação acadêmica e as decisões que tomamos diante do futuro.\nCTA: CONHEÇA O E-BOOK ↗`,
+  'P04': `HEADLINE: GRADUAÇÃO, PÓS OU OUTRO CAMINHO?\nSUBHEADLINE: Antes de decidir, entenda suas opções.\nCTA: DESCUBRA O LIVRO ↗`,
+  'P05': `HEADLINE: A IA MUDA. O QUE VALE A PENA APRENDER?\nSUBHEADLINE: Uma reflexão sobre ferramentas passageiras, fundamentos sólidos e o que continuará sendo seu conhecimento.\nCTA: SAIBA MAIS ↗`,
+  'P06': `HEADLINE: ANTES DE INVESTIR EM UMA FORMAÇÃO, FAÇA AS PERGUNTAS CERTAS.\nSUBHEADLINE: Inteligência artificial, graduação, pós-graduação e carreira.\nCTA: CONHEÇA O E-BOOK ↗`,
+  'P07': `HEADLINE: E SE A FERRAMENTA SIMPLIFICAR AQUILO QUE VOCÊ ESTÁ ESTUDANDO?\nSUBHEADLINE: O que continuará sendo seu conhecimento?\nCTA: EXPLORE ESSA REFLEXÃO ↗`,
+  'P08': `HEADLINE: AFINAL, VALE A PENA ESTUDAR INTELIGÊNCIA ARTIFICIAL?\nSUBHEADLINE: Uma leitura sobre tecnologia, formação e decisões profissionais.\nCTA: CONHEÇA O E-BOOK ↗`,
+  'S03': `VOCÊ ESTÁ ESTUDANDO PARA EVOLUIR OU APENAS PARA NÃO FICAR PARA TRÁS?\nCTA: CONHEÇA O E-BOOK ↗`,
+  'S1': `A inteligência artificial está mudando tudo?`,
+  'S2': `Mas você sabe por que quer estudá-la?`,
+  'S3': `Graduação, pós-graduação, cursos ou projetos: qual caminho faz sentido para você?`,
+  'S4': `Afinal, vale a pena estudar Inteligência Artificial?\nConheça o novo e-book da Coleção Afinal.\nCTA: SAIBA MAIS ↗`,
+  'BH_G': `O FUTURO ESTÁ MUDANDO.\nMas por que você está correndo atrás dele?\nCONHEÇA O E-BOOK ↗`,
+  'BH_S': `O FUTURO ESTÁ MUDANDO.\nMas por que você está correndo atrás dele?\nCONHEÇA O E-BOOK ↗`,
+  'LP_D': `COLEÇÃO AFINAL // TECNOLOGIA · VOL. 03\nAFINAL, VALE A PENA ESTUDAR INTELIGÊNCIA ARTIFICIAL?\nVocê está estudando para evoluir ou apenas para não ficar para trás?\nCONHEÇA O E-BOOK ↗`,
+  'LP_M': `AFINAL, VALE A PENA ESTUDAR IA?\nVocê está estudando para evoluir ou apenas para não ficar para trás?\nCONHEÇA O E-BOOK ↗`,
+  'OG': `COLEÇÃO AFINAL // TECNOLOGIA · VOL. 03\nAFINAL, VALE A PENA ESTUDAR IA?\nVocê está estudando para evoluir ou apenas para não ficar para trás?`
+};
+
+function copyCopy(id) {
+  const t = copies[id] || '';
+  navigator.clipboard.writeText(t).then(() => showToast("Texto copiado!"));
+}
+
+const captions = {
+  'PostA': `A cada nova tecnologia que desponta, o mercado educacional cria uma onda urgente de certificações, bootcamps e cursos que prometem "garantir sua sobrevivência no mercado".\n\nMas pare um minuto para pensar: toda mudança exige recomeçar do zero?\n\nHistoricamente, as ferramentas se transformam em ritmo acelerado, enquanto as competências fundamentais — raciocínio estruturado, visão de negócios, comunicação e capacidade de resolver problemas — continuam sendo a base sólida de qualquer carreira de destaque.\n\nAntes de se matricular no próximo curso apenas para aliviar a ansiedade de ficar para trás, pergunte-se:\n• Esse conhecimento complementa sua bagagem atual ou é apenas uma distração passageira?\n• O foco está no aprendizado de conceitos duradouros ou apenas em tutoriais de ferramentas que podem mudar no próximo semestre?\n\nNo Capítulo 7 do e-book "Afinal, vale a pena estudar Inteligência Artificial?", investigamos a fundo o papel da formação acadêmica e como o marketing educacional explora nossas inseguranças profissionais.\n\n👉 Conheça a publicação completa pelo link na bio.\n\n#InteligenciaArtificial #Educacao #CarreiraTech #DesenvolvimentoProfissional #ColecaoAfinal`,
+  'PostB': `Saber digitar comandos em um gerador de código ou criar prompts elaborados não faz de ninguém um arquiteto de software ou um estrategista de negócios.\n\nExiste uma fronteira nítida que costuma ser ignorada:\n• Operador de ferramenta: aprende a interface do momento. Quando a ferramenta é simplificada ou automatizada, seu diferencial desaparece.\n• Profissional de fundamentos: entende a lógica, os processos, as restrições e o problema real a ser resolvido. Ele usa a IA para acelerar a execução, mas o julgamento crítico permanece humano.\n\nA inteligência artificial não elimina a necessidade de conhecimento profundo; ela torna os fundamentos ainda mais valiosos.\n\n📖 Leia o Capítulo 3 de "Afinal, vale a pena estudar Inteligência Artificial?".\n👉 Link de acesso disponível na bio.\n\n#CarreiraEmTI #EngenhariaDeSoftware #Fundamentos #InteligenciaArtificial #ColecaoAfinal`,
+  'PostC': `Antes de comprometer dezoito meses da sua vida e dezenas de milhares de reais em uma pós-graduação ou MBA em Inteligência Artificial, faça a si mesmo uma pergunta honesta:\n\nQual problema específico essa formação vai resolver na sua trajetória?\n\nUma pós-graduação pode ser um investimento excelente quando:\n1️⃣ O mercado em que você atua exige titulação formal para progressão;\n2️⃣ A instituição oferece uma rede de contatos qualificada que você não acessaria de outra forma;\n3️⃣ O programa aprofunda métodos e teorias sólidas, e não apenas tópicos superficiais de internet.\n\nNo e-book "Afinal, vale a pena estudar Inteligência Artificial?", você encontra um checklist prático com 7 perguntas para avaliar cursos antes de tomar decisões financeiras.\n\n👉 Garanta seu exemplar digital no link da bio.\n\n#PosGraduacao #MBA #EducacaoExecutiva #Carreira #InteligenciaArtificial #ColecaoAfinal`,
+  'PostD': `Muito do ruído em torno do estudo de inteligência artificial vem da confusão entre dois caminhos profissionais completamente distintos:\n\n🔹 Desenvolver IA: exige anos de dedicação em matemática avançada, álgebra linear, estatística, cálculo e engenharia de dados.\n🔹 Aplicar IA: exige compreensão profunda das dores do negócio, análise de fluxos de trabalho, gestão de produtos e capacidade de integrar ferramentas existentes.\n\nSe o seu objetivo é aplicar IA no trabalho para produzir melhor, você não precisa de um curso de cálculo diferencial. Você precisa de clareza sobre os gargalos do seu setor.\n\n👉 Conheça o e-book no link da bio.\n\n#CienciaDeDados #MachineLearning #Gestao #Produtividade #InteligenciaArtificial #ColecaoAfinal`
+};
+
+function copyLegend(id) {
+  const t = captions[id] || '';
+  navigator.clipboard.writeText(t).then(() => showToast("Legenda completa copiada!"));
+}
+
+function copyAllCampaignContent() {
+  let all = "=== COLEÇÃO AFINAL (VOL. 03) — COPYS E LEGENDAS COMPLETAS ===\n\n";
+  for (const [k, v] of Object.entries(copies)) {
+    all += `--- [PEÇA ${k}] ---\n${v}\n\n`;
+  }
+  all += "\n=== LEGENDAS PARA REDES SOCIAIS ===\n\n";
+  for (const [k, v] of Object.entries(captions)) {
+    all += `--- [${k}] ---\n${v}\n\n`;
+  }
+  navigator.clipboard.writeText(all).then(() => showToast("Todas as copys e legendas copiadas!"));
+}
+</script>
+</body>
+</html>
