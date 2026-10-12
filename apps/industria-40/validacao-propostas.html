@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coleção Afinal — Indústria 4.0 | Validação de Propostas Criativas (1080 × 1350)</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF8A00;
+  --orange-deep: #E67600;
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --offwhite: #F7F6F2;
+  --gray-mid: #6B7280;
+  --bg-dark: #0D0F13;
+  --card-dark: #151820;
+  --border-dark: #242935;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-dark);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* HEADER */
+.topbar {
+  background: #11141A;
+  border-bottom: 1px solid var(--border-dark);
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.brand-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-pill {
+  background: var(--orange);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 11px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: #fff;
+}
+.brand-sub {
+  font-size: 12px;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn-nav {
+  background: #1F2430;
+  color: #E2E8F0;
+  border: 1px solid #2F3646;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-nav:hover {
+  background: #2B3244;
+  border-color: var(--orange);
+  color: #fff;
+}
+.btn-nav.active {
+  background: var(--orange);
+  color: var(--ink);
+  border-color: var(--orange);
+  font-weight: 700;
+}
+
+/* INTRO BANNER */
+.intro-section {
+  max-width: 1800px;
+  margin: 28px auto 16px;
+  padding: 0 32px;
+}
+.intro-card {
+  background: #151821;
+  border: 1px solid var(--border-dark);
+  border-left: 6px solid var(--orange);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.intro-text h2 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.intro-text p {
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.5;
+  max-width: 850px;
+}
+.stage-badge {
+  background: #202635;
+  border: 1px solid #313A4D;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* CONTROLES DE ZOOM */
+.view-controls {
+  max-width: 1800px;
+  margin: 12px auto 24px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #94A3B8;
+}
+.zoom-btns {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.zoom-btn {
+  background: #191E28;
+  border: 1px solid #2B3345;
+  color: #CBD5E1;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.zoom-btn:hover { background: #242B3C; color: #fff; }
+.zoom-btn.active {
+  background: #2D364A;
+  color: var(--orange);
+  border-color: var(--orange);
+  font-weight: 700;
+}
+
+/* GRID PRINCIPAL DE PROPOSTAS */
+.proposals-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.proposal-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.proposal-header {
+  background: #151820;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.prop-tag-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.prop-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: #212634;
+  color: var(--orange);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.prop-dim {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #94A3B8;
+}
+.prop-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.prop-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #94A3B8;
+}
+
+/* ÁREA DE VISUALIZAÇÃO DA ARTE */
+.stage-viewport {
+  background: #0B0D11;
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+  min-height: 600px;
+}
+
+/* ==============================================================
+   ESTRUTURA DAS ARTES (1080 × 1350 px NATIVO)
+   Escalado proporcionalmente para a interface web
+   ============================================================== */
+.art-canvas {
+  width: 440px;
+  height: 550px; /* proporção exata 4:5 -> 1080x1350 */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  user-select: none;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------
+   PROPOSTA A: EDITORIAL TIPOGRÁFICO (Laranja Dominante)
+   -------------------------------------------------- */
+.art-proposal-a {
+  background: var(--orange);
+  color: var(--ink);
+  padding: 28px 24px;
+}
+.art-proposal-a .header-rule {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.art-proposal-a .eyebrow-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.art-proposal-a .main-headline {
+  font-family: var(--font-display);
+  font-size: 27px;
+  line-height: 1.0;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px;
+}
+.art-proposal-a .headline-sub {
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--ink);
+  max-width: 320px;
+}
+.art-proposal-a .center-editorial {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+.art-proposal-a .cover-frame {
+  width: 150px;
+  border: 2px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--ink);
+  transform: rotate(-3deg);
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+.art-proposal-a .cover-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.art-proposal-a .data-strip {
+  background: var(--ink);
+  color: #fff;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.art-proposal-a .footer-action {
+  border-top: 2px solid var(--ink);
+  padding-top: 12px;
+}
+.art-proposal-a .btn-cta {
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+/* --------------------------------------------------
+   PROPOSTA B: GEOMETRIA INDUSTRIAL ABSTRATA (Preto Dominante)
+   -------------------------------------------------- */
+.art-proposal-b {
+  background: var(--ink);
+  color: #fff;
+  padding: 28px 24px;
+}
+.art-proposal-b .top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.art-proposal-b .title-box h3 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
+}
+.art-proposal-b .title-box h3 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.art-proposal-b .sub-lead {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #CBD5E1;
+  max-width: 310px;
+}
+.art-proposal-b .geo-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.art-proposal-b .cover-stamp {
+  width: 140px;
+  border: 1px solid var(--orange);
+  box-shadow: 10px 10px 0 rgba(255, 138, 0, 0.4);
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+.art-proposal-b .cover-stamp img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.art-proposal-b .feature-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.art-proposal-b .feat-item {
+  background: #191E28;
+  border-left: 3px solid var(--orange);
+  padding: 6px 10px;
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+.art-proposal-b .btn-cta-orange {
+  background: var(--orange);
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+/* --------------------------------------------------
+   PROPOSTA C: PRODUTO EM DESTAQUE COM MOCKUP (Off-White Editorial)
+   -------------------------------------------------- */
+.art-proposal-c {
+  background: var(--offwhite);
+  color: var(--ink);
+  padding: 28px 24px;
+  border: 4px solid var(--orange);
+}
+.art-proposal-c .head-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.art-proposal-c .provoke-h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+.art-proposal-c .provoke-sub {
+  font-size: 10.5px;
+  line-height: 1.4;
+  color: #4B5563;
+  font-weight: 500;
+}
+.art-proposal-c .mockup-stage {
+  position: relative;
+  background: #ECEAE4;
+  border: 1px solid #D1D5DB;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.art-proposal-c .book-3d {
+  width: 145px;
+  transform: perspective(600px) rotateY(-8deg) rotateX(2deg);
+  box-shadow: 14px 18px 24px rgba(0,0,0,0.25), 1px 1px 0 var(--ink);
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+.art-proposal-c .book-3d img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.art-proposal-c .pills-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.art-proposal-c .spec-pill {
+  background: #fff;
+  border: 1px solid var(--ink);
+  padding: 5px 8px;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-align: center;
+  flex: 1;
+}
+.art-proposal-c .btn-cta-c {
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+}
+
+/* FOOTER INFORMATIVO */
+.proposal-footer {
+  background: #151820;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #94A3B8;
+}
+.proposal-footer strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+.copy-box {
+  background: #0E1015;
+  border: 1px solid #232833;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #CBD5E1;
+  margin-top: 8px;
+  white-space: pre-wrap;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1400px) {
+  .proposals-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-box">
+      <div class="brand-pill">COLEÇÃO AFINAL</div>
+      <div>
+        <h1 class="brand-title">Afinal, o que é Indústria 4.0?</h1>
+        <p class="brand-sub">Kit Gráfico Publicitário — Etapa 2: Validação das Propostas (1080 × 1350)</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <a href="index.html" class="btn-nav">← Landing Page</a>
+      <span class="btn-nav active">Etapa 2: Validação</span>
+    </div>
+  </div>
+</header>
+
+<!-- INTRODUÇÃO DA ETAPA DE VALIDAÇÃO -->
+<section class="intro-section">
+  <div class="intro-card">
+    <div class="intro-text">
+      <h2>Apresentação das 3 Direções Visuais para Aprovação</h2>
+      <p>Conforme estabelecido no processo de criação (#12), apresentamos as três abordagens no formato <strong>1080 × 1350 px (Feed 4:5)</strong>, utilizando fielmente a capa oficial como âncora visual, paleta autêntica (Laranja #FF8A00, Preto #111111, Branco #FFFFFF e Off-white #F7F6F2) e grafismos industriais. Analise cada proposta antes da expansão para os demais formatos.</p>
+    </div>
+    <div class="stage-badge">
+      ETAPA 2 // AGUARDANDO VALIDAÇÃO
+    </div>
+  </div>
+</section>
+
+<!-- CONTROLES DE ZOOM -->
+<div class="view-controls">
+  <div>Comparativo lado a lado das 3 propostas conceituais</div>
+  <div class="zoom-btns">
+    <span>Visualização:</span>
+    <button class="zoom-btn active" onclick="setZoom(1)">Padrão</button>
+    <button class="zoom-btn" onclick="setZoom(1.15)">Zoom 115%</button>
+  </div>
+</div>
+
+<!-- CONTAINER PRINCIPAL DAS 3 PROPOSTAS -->
+<main class="proposals-container" id="proposalsGrid">
+
+  <!-- ==============================================================
+       PROPOSTA A — EDITORIAL TIPOGRÁFICO
+       ============================================================== -->
+  <article class="proposal-wrapper">
+    <div class="proposal-header">
+      <div class="prop-tag-row">
+        <span class="prop-tag">PROPOSTA A</span>
+        <span class="prop-dim">1080 × 1350 px</span>
+      </div>
+      <h3 class="prop-title">Editorial Tipográfico</h3>
+      <p class="prop-desc">Foco na clareza suíça, autoridade editorial e contraste laranja dominante. O texto é o herói com a capa original servindo de ancoragem técnica.</p>
+    </div>
+
+    <div class="stage-viewport">
+      <!-- ARTE PROPOSTA A -->
+      <div class="art-canvas art-proposal-a" id="artA">
+        <!-- SVG Concentric Arcs Top Right Background -->
+        <svg style="position: absolute; right: -40px; top: -40px; width: 220px; height: 220px; opacity: 0.9; pointer-events: none;" viewBox="0 0 160 160">
+          <circle cx="80" cy="80" r="70" stroke="#111" stroke-width="12" fill="none"/>
+          <circle cx="80" cy="80" r="54" stroke="#111" stroke-width="2.5" fill="none"/>
+          <circle cx="80" cy="80" r="44" stroke="#111" stroke-width="2.5" fill="none"/>
+          <circle cx="80" cy="80" r="34" stroke="#111" stroke-width="2.5" fill="none"/>
+          <circle cx="80" cy="80" r="16" fill="#fff"/>
+        </svg>
+
+        <!-- Top Header -->
+        <div style="position: relative; z-index: 2;">
+          <div class="header-rule">
+            <span class="eyebrow-tag">COLEÇÃO AFINAL // VOL. 02</span>
+            <!-- Dot Matrix 3x4 -->
+            <svg width="24" height="18" viewBox="0 0 24 18" fill="#111">
+              <circle cx="3" cy="3" r="1.8"/> <circle cx="9" cy="3" r="1.8"/> <circle cx="15" cy="3" r="1.8"/> <circle cx="21" cy="3" r="1.8"/>
+              <circle cx="3" cy="9" r="1.8"/> <circle cx="9" cy="9" r="1.8"/> <circle cx="15" cy="9" r="1.8"/> <circle cx="21" cy="9" r="1.8"/>
+              <circle cx="3" cy="15" r="1.8"/> <circle cx="9" cy="15" r="1.8"/> <circle cx="15" cy="15" r="1.8"/> <circle cx="21" cy="15" r="1.8"/>
+            </svg>
+          </div>
+          <h2 class="main-headline">
+            A indústria está mudando.<br>Entenda como.
+          </h2>
+          <p class="headline-sub">
+            Máquinas, pessoas e dados trabalhando de forma integrada no chão de fábrica.
+          </p>
+        </div>
+
+        <!-- Center: Capa Real com Sombra Projetada -->
+        <div class="center-editorial">
+          <div class="cover-frame">
+            <img src="assets/capa.webp" alt="Capa Oficial: Afinal, o que é Indústria 4.0?">
+          </div>
+          <!-- Selo Lateral -->
+          <div style="position: absolute; right: 18px; bottom: 12px; background: #fff; color: #111; padding: 6px 10px; font-family: var(--font-mono); font-size: 8.5px; font-weight: 700; border: 1.5px solid #111; box-shadow: 4px 4px 0 #111; z-index: 3;">
+            TECNOLOGIA<br><span style="color: var(--orange-deep);">NA PRÁTICA</span>
+          </div>
+        </div>
+
+        <!-- Data Strip -->
+        <div class="data-strip">
+          <span>01 · SENSORES</span>
+          <span>02 · DADOS</span>
+          <span>03 · AUTOMAÇÃO</span>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="footer-action">
+          <div class="btn-cta">
+            <span>CONHEÇA O E-BOOK</span>
+            <span style="font-size: 16px;">↗</span>
+          </div>
+          <div style="text-align: center; font-size: 8.5px; font-weight: 700; margin-top: 6px; letter-spacing: 0.5px; color: #111;">
+            PUBLICAÇÃO DIGITAL · LEITURA ACESSÍVEL
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proposal-footer">
+      <strong>Direção Estratégica:</strong>
+      Linha editorial de alto prestígio. Excelente para tráfego topo de funil no Instagram/LinkedIn onde o impacto visual e a autoridade do título precisam parar o feed.
+      <div class="copy-box">HEADLINE: A indústria está mudando. Entenda como.
+SUBHEADLINE: Máquinas, pessoas e dados trabalhando de forma integrada no chão de fábrica.
+CTA: CONHEÇA O E-BOOK ↗</div>
+    </div>
+  </article>
+
+  <!-- ==============================================================
+       PROPOSTA B — GEOMETRIA INDUSTRIAL ABSTRATA
+       ============================================================== -->
+  <article class="proposal-wrapper">
+    <div class="proposal-header">
+      <div class="prop-tag-row">
+        <span class="prop-tag">PROPOSTA B</span>
+        <span class="prop-dim">1080 × 1350 px</span>
+      </div>
+      <h3 class="prop-title">Geometria Industrial Abstrata</h3>
+      <p class="prop-desc">Foco na metáfora visual entre o mecânico (engrenagem preta) e a conectividade de dados (arcos e nós). Fundo preto dominante de alto contraste.</p>
+    </div>
+
+    <div class="stage-viewport">
+      <!-- ARTE PROPOSTA B -->
+      <div class="art-canvas art-proposal-b" id="artB">
+        <!-- SVG Gear Wheel at Bottom Left -->
+        <svg style="position: absolute; left: -50px; bottom: -50px; width: 200px; height: 200px; opacity: 0.25; pointer-events: none;" viewBox="0 0 100 100">
+          <path d="M 50,15 L 53,25 L 63,20 L 63,30 L 73,28 L 70,38 L 80,40 L 73,48 L 82,53 L 73,58 L 79,66 L 69,68 L 71,78 L 61,77 L 60,87 L 50,83 L 40,87 L 39,77 L 29,78 L 31,68 L 21,66 L 27,58 L 18,53 L 27,48 L 20,40 L 30,38 L 27,28 L 37,30 L 37,20 L 47,25 Z" fill="#FF8A00"/>
+          <circle cx="50" cy="50" r="18" fill="#111"/>
+        </svg>
+
+        <!-- Top Meta -->
+        <div class="top-meta">
+          <span style="background: var(--orange); color: #111; font-family: var(--font-mono); font-size: 8.5px; font-weight: 800; padding: 3px 6px; letter-spacing: 1px;">
+            COLEÇÃO AFINAL
+          </span>
+          <span style="font-family: var(--font-mono); font-size: 9px; color: var(--orange); font-weight: 700;">
+            TECNOLOGIA · VOL. 02
+          </span>
+        </div>
+
+        <!-- Headline com destaque em Laranja -->
+        <div class="title-box">
+          <h3>
+            Afinal, o que é<br><em>Indústria 4.0?</em>
+          </h3>
+          <p class="sub-lead">
+            Muito além dos robôs: entenda como a circulação de informação transforma a produção.
+          </p>
+        </div>
+
+        <!-- Centerpiece Geometric Diagram with Book Cover -->
+        <div class="geo-center">
+          <!-- Concentric Grooves Behind Cover -->
+          <svg style="position: absolute; width: 240px; height: 240px; opacity: 0.45;" viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="75" stroke="#FF8A00" stroke-width="4" fill="none"/>
+            <circle cx="80" cy="80" r="62" stroke="#FFF" stroke-width="1.5" fill="none"/>
+            <circle cx="80" cy="80" r="50" stroke="#FF8A00" stroke-width="1.5" fill="none"/>
+            <circle cx="80" cy="80" r="38" stroke="#FFF" stroke-width="1.5" fill="none"/>
+          </svg>
+          <div class="cover-stamp">
+            <img src="assets/capa.webp" alt="Capa Oficial: Afinal, o que é Indústria 4.0?">
+          </div>
+        </div>
+
+        <!-- 2 Feature Blocks -->
+        <div class="feature-blocks">
+          <div class="feat-item">
+            <span style="color: var(--orange); font-size: 8px; display: block; font-family: var(--font-mono);">01 / VISÃO REAL</span>
+            Sem jargões ou promessas irreais
+          </div>
+          <div class="feat-item">
+            <span style="color: var(--orange); font-size: 8px; display: block; font-family: var(--font-mono);">02 / CONECTIVIDADE</span>
+            O caminho do dado à decisão
+          </div>
+        </div>
+
+        <!-- Footer CTA -->
+        <div>
+          <div class="btn-cta-orange">
+            <span>SAIBA MAIS</span>
+            <span style="font-size: 16px;">↗</span>
+          </div>
+          <div style="text-align: center; font-size: 8.5px; color: #94A3B8; margin-top: 6px; font-weight: 600;">
+            GUIA PRÁTICO EM PDF · CASO HORIZONTE COMPONENTES
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proposal-footer">
+      <strong>Direção Estratégica:</strong>
+      Contraste extremo para campanhas de curiosidade. Quebra o mito dos "robôs futuristas" e apresenta a realidade da automação e dos dados com precisão industrial.
+      <div class="copy-box">HEADLINE: Afinal, o que é Indústria 4.0?
+SUBHEADLINE: Muito além dos robôs: entenda como a circulação de informação transforma a produção.
+CTA: SAIBA MAIS ↗</div>
+    </div>
+  </article>
+
+  <!-- ==============================================================
+       PROPOSTA C — PRODUTO EM DESTAQUE COM MOCKUP PREMIUM
+       ============================================================== -->
+  <article class="proposal-wrapper">
+    <div class="proposal-header">
+      <div class="prop-tag-row">
+        <span class="prop-tag">PROPOSTA C</span>
+        <span class="prop-dim">1080 × 1350 px</span>
+      </div>
+      <h3 class="prop-title">Produto em Destaque (Mockup 3D)</h3>
+      <p class="prop-desc">Foco na tangibilidade e valor percebido do e-book como livro físico/editorial. Fundo off-white com moldura laranja e pergunta reflexiva para o profissional.</p>
+    </div>
+
+    <div class="stage-viewport">
+      <!-- ARTE PROPOSTA C -->
+      <div class="art-canvas art-proposal-c" id="artC">
+        <!-- Top Head -->
+        <div>
+          <div class="head-top">
+            <span style="font-family: var(--font-mono); font-size: 9px; font-weight: 800; letter-spacing: 1px;">COLEÇÃO AFINAL</span>
+            <span style="background: var(--ink); color: #fff; font-size: 8px; font-weight: 800; padding: 2px 6px; letter-spacing: 0.8px;">EDIÇÃO DIGITAL</span>
+          </div>
+          <h3 class="provoke-h3">
+            Você trabalha na indústria.<br>Mas entende a tecnologia por trás dela?
+          </h3>
+          <p class="provoke-sub">
+            Conheça o e-book que explica como máquinas, pessoas e dados se conectam de forma prática.
+          </p>
+        </div>
+
+        <!-- Mockup Stage -->
+        <div class="mockup-stage">
+          <div class="book-3d">
+            <img src="assets/capa.webp" alt="Capa Oficial: Afinal, o que é Indústria 4.0?">
+          </div>
+          <!-- Selo Flutuante -->
+          <div style="position: absolute; right: 14px; top: 14px; background: var(--orange); color: var(--ink); font-family: var(--font-mono); font-size: 8px; font-weight: 900; padding: 4px 6px; border: 1.5px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);">
+            VOL. 02
+          </div>
+        </div>
+
+        <!-- 3 Spec Pills -->
+        <div class="pills-row">
+          <div class="spec-pill">12 CAPÍTULOS</div>
+          <div class="spec-pill">ROTEIRO 30 DIAS</div>
+          <div class="spec-pill">CHECKLISTS</div>
+        </div>
+
+        <!-- CTA Bottom -->
+        <div>
+          <div class="btn-cta-c">
+            <span>CONHEÇA O E-BOOK</span>
+            <span style="font-size: 16px;">↗</span>
+          </div>
+          <div style="text-align: center; font-size: 8.5px; color: #6B7280; margin-top: 6px; font-weight: 600;">
+            ENTENDA A INDÚSTRIA 4.0 DE FORMA PRÁTICA
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proposal-footer">
+      <strong>Direção Estratégica:</strong>
+      Posicionamento para profissionais do setor (técnicos, operadores, gestores, estudantes). Gera valor percebido imediato pela apresentação impecável de livro premium.
+      <div class="copy-box">HEADLINE: Você trabalha na indústria. Mas entende a tecnologia por trás dela?
+SUBHEADLINE: Conheça o e-book que explica como máquinas, pessoas e dados se conectam de forma prática.
+CTA: CONHEÇA O E-BOOK ↗</div>
+    </div>
+  </article>
+
+</main>
+
+<script>
+function setZoom(scale) {
+  document.querySelectorAll('.zoom-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.art-canvas').forEach(canvas => {
+    canvas.style.transform = scale === 1 ? 'none' : `scale(${scale})`;
+  });
+}
+</script>
+</body>
+</html>

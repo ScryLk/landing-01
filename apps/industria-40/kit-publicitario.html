@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Gráfico Publicitário Completo — Coleção Afinal: Indústria 4.0</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF8A00;
+  --orange-deep: #E67600;
+  --ink: #111111;
+  --paper: #FFFFFF;
+  --offwhite: #F7F6F2;
+  --bg-dark: #0A0C10;
+  --card-dark: #141720;
+  --border-dark: #222735;
+  --text-muted: #8E9BAE;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-dark);
+  color: #E2E8F0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* TOPBAR */
+.kit-header {
+  background: #10131A;
+  border-bottom: 1px solid var(--border-dark);
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+.header-inner {
+  max-width: 1750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  background: var(--orange);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 11px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn-nav {
+  background: #1C212C;
+  color: #fff;
+  border: 1px solid #2B3344;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-nav:hover {
+  background: #272E3E;
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.btn-nav.primary {
+  background: var(--orange);
+  color: var(--ink);
+  border-color: var(--orange);
+  font-weight: 700;
+}
+.btn-nav.primary:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+/* FILTROS */
+.filters-bar {
+  background: #131720;
+  border-bottom: 1px solid var(--border-dark);
+  padding: 14px 32px;
+}
+.filters-inner {
+  max-width: 1750px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+.pill {
+  background: #1A1F2C;
+  border: 1px solid #283042;
+  color: #CBD5E1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pill:hover { background: #242B3C; color: #fff; }
+.pill.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* STATUS */
+.stats-bar {
+  max-width: 1750px;
+  margin: 20px auto 10px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* CONTAINER DAS SEÇÕES */
+.kit-content {
+  max-width: 1750px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.group-section {
+  margin-top: 40px;
+}
+.group-header {
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.group-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.group-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background: #202634;
+  color: var(--orange);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+.group-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* GRID DE CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 28px;
+}
+.cards-grid.wide-grid {
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+}
+
+.piece-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.piece-card:hover {
+  border-color: #384257;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-top {
+  padding: 12px 18px;
+  background: #171B26;
+  border-bottom: 1px solid var(--border-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dim-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: #0E1015;
+  color: var(--orange);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.card-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-btn {
+  background: #232936;
+  border: none;
+  color: #CBD5E1;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-btn:hover { background: var(--orange); color: var(--ink); }
+
+.card-stage {
+  padding: 20px;
+  background: #090B0E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+  position: relative;
+}
+.card-stage img {
+  max-width: 100%;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  border-radius: 4px;
+}
+
+.card-bottom {
+  padding: 16px 18px;
+  background: #131720;
+  border-top: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.copy-snippet {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #94A3B8;
+  background: #0C0E13;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #1F2532;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+}
+.card-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-dl {
+  background: #202634;
+  color: #CBD5E1;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s;
+}
+.btn-dl:hover {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--orange);
+  color: var(--ink);
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+}
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .kit-header, .filters-bar, .kit-content, .stats-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="kit-header">
+  <div class="header-inner">
+    <div class="brand-group">
+      <div class="brand-mark">COLEÇÃO AFINAL</div>
+      <div>
+        <h1 class="brand-title">Kit Gráfico Publicitário Completo</h1>
+        <p class="brand-subtitle">Volume 02: Afinal, o que é Indústria 4.0? — Coleção de Alta Conversão</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="index.html" class="btn-nav">← Landing Page</a>
+      <a href="validacao-propostas.html" class="btn-nav">Propostas de Validação</a>
+      <button class="btn-nav primary" onclick="copyAllCaptions()">✨ Copiar Todas as Copys e Legendas</button>
+    </div>
+  </div>
+</header>
+
+<!-- FILTROS -->
+<nav class="filters-bar" aria-label="Filtros de Peças">
+  <div class="filters-inner" id="filterContainer">
+    <span class="filter-label">Filtrar Grupo:</span>
+    <button class="pill active" data-filter="all">Todas as Peças (23)</button>
+    <button class="pill" data-filter="g01">01 · Identidade & Thumbnail</button>
+    <button class="pill" data-filter="g02">02 · Mockups do Produto</button>
+    <button class="pill" data-filter="g03">03 · Criativos de Anúncios</button>
+    <button class="pill" data-filter="g04">04 · Posts Educativos</button>
+    <button class="pill" data-filter="g05">05 · Stories</button>
+    <button class="pill" data-filter="g06">06 · Banners de LP</button>
+    <button class="pill" data-filter="g07">07 · Open Graph / WhatsApp</button>
+  </div>
+</nav>
+
+<div class="stats-bar">
+  <div id="statusCounter">Exibindo todas as 23 peças publicitárias organizadas</div>
+  <div>Formato de Entrega: PNG 100% de Alta Resolução</div>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="kit-content">
+
+  <!-- ==============================================================
+       GRUPO 01: IDENTIDADE E THUMBNAIL
+       ============================================================== -->
+  <section class="group-section" data-group="g01">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 01</span>
+          Identidade e Thumbnails Oficiais (Kiwify & Catálogos)
+        </h2>
+        <p class="group-desc">Peças em 1080 × 1080 px otimizadas para visibilidade em catálogo, checkout e listagens da Kiwify.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- 01A -->
+      <article class="piece-card" data-group="g01">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Thumbnail Kiwify com Mockup</span>
+          <button class="card-btn" onclick="copyCopy('T1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/01-identidade-e-thumbnail/peca-01-thumbnail-kiwify-com-mockup-1080x1080.png" alt="Thumbnail Kiwify com Mockup">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: COLEÇÃO AFINAL // TECNOLOGIA · VOL. 02
+DESTAQUE: EDIÇÃO DIGITAL · ACESSO IMEDIATO NA KIWIFY ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Uso: Kiwify & Vitrines</span>
+            <a href="kit-publicitario/01-identidade-e-thumbnail/peca-01-thumbnail-kiwify-com-mockup-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 01B -->
+      <article class="piece-card" data-group="g01">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Thumbnail Kiwify Apenas Capa</span>
+          <button class="card-btn" onclick="copyCopy('T2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/01-identidade-e-thumbnail/peca-01-thumbnail-kiwify-apenas-capa-1080x1080.png" alt="Thumbnail Kiwify Apenas Capa">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">COMPOSIÇÃO: Capa Oficial pura em destaque máximo
+PADRÃO: Enquadramento com respiros para miniatura</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Uso: Checkout Kiwify</span>
+            <a href="kit-publicitario/01-identidade-e-thumbnail/peca-01-thumbnail-kiwify-apenas-capa-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 02: MOCKUPS DO PRODUTO
+       ============================================================== -->
+  <section class="group-section" data-group="g02">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 02</span>
+          Mockups Premium do E-book
+        </h2>
+        <p class="group-desc">Três apresentações tridimensionais sofisticadas, incluindo tablet editorial e páginas internas 100% reais do livro.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- 02A -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 1: Perspectiva 3D Discreta</span>
+          <button class="card-btn" onclick="copyCopy('M1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups-do-produto/peca-02-mockup-perspectiva-3d-1080x1080.png" alt="Mockup 3D">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: MOCKUP EDITORIAL 3D // TECNOLOGIA · VOL. 02
+FORMATO: Digital em PDF · Celular, Tablet e Computador</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Uso: Hero & Anúncios</span>
+            <a href="kit-publicitario/02-mockups-do-produto/peca-02-mockup-perspectiva-3d-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02B -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 2: Tablet Editorial</span>
+          <button class="card-btn" onclick="copyCopy('M2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups-do-produto/peca-02-mockup-tablet-editorial-1080x1080.png" alt="Mockup Tablet">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: LEITURA DIGITAL ACESSÍVEL
+SUB: Layout responsivo e visualização perfeita em qualquer dispositivo</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Uso: Seção do Produto</span>
+            <a href="kit-publicitario/02-mockups-do-produto/peca-02-mockup-tablet-editorial-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02C -->
+      <article class="piece-card" data-group="g02">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Mockup 3: Livro com Páginas Reais</span>
+          <button class="card-btn" onclick="copyCopy('M3')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/02-mockups-do-produto/peca-02-mockup-livro-com-paginas-reais-1080x1080.png" alt="Mockup Páginas Reais">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: POR DENTRO DA PUBLICAÇÃO
+PÁGINAS REAIS: Diagrama da fábrica e Linha do tempo das revoluções</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Uso: Landing Page & Prova</span>
+            <a href="kit-publicitario/02-mockups-do-produto/peca-02-mockup-livro-com-paginas-reais-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 03: CRIATIVOS DE ANÚNCIOS
+       ============================================================== -->
+  <section class="group-section" data-group="g03">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 03</span>
+          Criativos de Anúncios de Alta Conversão (Meta Ads)
+        </h2>
+        <p class="group-desc">Peças nos formatos 1080 × 1080, 1080 × 1350 e 1080 × 1920 cobrindo os ângulos de curiosidade, transformação, profissionais e produto.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- 03A -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Peça 03 · Curiosidade Quadrado</span>
+          <button class="card-btn" onclick="copyCopy('A3_1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1080.png" alt="Curiosidade 1080x1080">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?
+SUB: Muito além dos robôs.
+CTA: SAIBA MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Feed 1:1</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03B -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 03 · Curiosidade Feed Vertical</span>
+          <button class="card-btn" onclick="copyCopy('A3_2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1350.png" alt="Curiosidade 1080x1350">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?
+SUB: Muito além dos robôs. Entenda como máquinas e dados se conectam.
+CTA: SAIBA MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Feed 4:5 (Instagram / LinkedIn)</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03C -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Peça 03 · Curiosidade Vertical Stories</span>
+          <button class="card-btn" onclick="copyCopy('A3_3')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1920.png" alt="Curiosidade 1080x1920">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?
+CTA: TOQUE PARA SABER MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Stories / Reels 9:16</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-03-curiosidade-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 04 · Anúncio de Transformação</span>
+          <button class="card-btn" onclick="copyCopy('A4')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-04-transformacao-1080x1350.png" alt="Transformação">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: A INDÚSTRIA ESTÁ MUDANDO.
+SUB: Entenda como. Conectividade, dados e pessoas transformando a fábrica.
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Feed 4:5 Laranja Dominante</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-04-transformacao-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 05 · Para Profissionais da Indústria</span>
+          <button class="card-btn" onclick="copyCopy('A5')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-05-profissionais-1080x1350.png" alt="Para Profissionais">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: VOCÊ TRABALHA NA INDÚSTRIA. MAS ENTENDE A TECNOLOGIA POR TRÁS DELA?
+SUB: Conheça a Indústria 4.0 de forma prática.
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Público Técnico & Operacional</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-05-profissionais-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 06 · Anúncio Educacional</span>
+          <button class="card-btn" onclick="copyCopy('A6')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-06-educacional-sensores-dados-1080x1350.png" alt="Educacional">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: SENSORES. DADOS. AUTOMAÇÃO. INTELIGÊNCIA ARTIFICIAL.
+SUB: Entenda como tudo isso se conecta.
+CTA: SAIBA MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Estrutura 4 Quadrantes</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-06-educacional-sensores-dados-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 -->
+      <article class="piece-card" data-group="g03">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Peça 07 · Anúncio de Produto</span>
+          <button class="card-btn" onclick="copyCopy('A7')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/03-criativos-de-anuncios/peca-07-anuncio-produto-saiba-mais-1080x1350.png" alt="Produto">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: CONHEÇA O E-BOOK.
+SUB: Afinal, o que é Indústria 4.0? Um guia prático para as fábricas modernas.
+CTA: SAIBA MAIS ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Capa em Destaque Absoluto</span>
+            <a href="kit-publicitario/03-criativos-de-anuncios/peca-07-anuncio-produto-saiba-mais-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 04: POSTS EDUCATIVOS COM LEGENDAS
+       ============================================================== -->
+  <section class="group-section" data-group="g04">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 04</span>
+          Posts Educativos para Social Media (com Legendas Prontas)
+        </h2>
+        <p class="group-desc">3 posts de alto valor no formato 1080 × 1080 px acompanhados de legendas educativas completas para Instagram e LinkedIn.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- Post A -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post A · Não É Apenas Robótica</span>
+          <button class="card-btn" onclick="copyLegend('PostA')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-posts-educativos/peca-11-post-a-nao-e-apenas-robotica-1080x1080.png" alt="Post A">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: INDÚSTRIA 4.0 NÃO É APENAS ROBÓTICA.
+CONCEITO: Automação vs Conectividade real da informação.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Carrossel / Post Feed</span>
+            <a href="kit-publicitario/04-posts-educativos/peca-11-post-a-nao-e-apenas-robotica-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post B -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post B · Como a Máquina Envia Dados</span>
+          <button class="card-btn" onclick="copyLegend('PostB')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-posts-educativos/peca-11-post-b-como-maquina-envia-dados-1080x1080.png" alt="Post B">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: COMO UMA MÁQUINA CONSEGUE ENVIAR INFORMAÇÕES?
+FLUXO: 1. Sensor → 2. Sinal Digital → 3. Rede IIoT → 4. Decisão.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Telemetria na Prática</span>
+            <a href="kit-publicitario/04-posts-educativos/peca-11-post-b-como-maquina-envia-dados-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Post C -->
+      <article class="piece-card" data-group="g04">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1080 px</span>
+          <span class="card-name">Post C · Importância dos Dados</span>
+          <button class="card-btn" onclick="copyLegend('PostC')">Copiar Legenda</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/04-posts-educativos/peca-11-post-c-importancia-dos-dados-1080x1080.png" alt="Post C">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TÍTULO: POR QUE OS DADOS SÃO TÃO IMPORTANTES NAS FÁBRICAS?
+MÉTRICAS: Dado Bruto → Informação Contextualizada → OEE.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">PCP & Gestão Industrial</span>
+            <a href="kit-publicitario/04-posts-educativos/peca-11-post-c-importancia-dos-dados-1080x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 05: STORIES
+       ============================================================== -->
+  <section class="group-section" data-group="g05">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 05</span>
+          Sequência de Stories Promocionais (1080 × 1920)
+        </h2>
+        <p class="group-desc">Narrativa em 3 passos (Curiosidade → Descoberta → Produto com CTA) respeitando zonas seguras do Instagram.</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <!-- Story 1 -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 1 · Curiosidade (1/3)</span>
+          <button class="card-btn" onclick="copyCopy('S1')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-stories/peca-12-story-1-curiosidade-1080x1920.png" alt="Story 1">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: Todo mundo fala em Indústria 4.0...
+Mas você sabe o que isso significa de verdade?</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Gancho de Retenção</span>
+            <a href="kit-publicitario/05-stories/peca-12-story-1-curiosidade-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 2 -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 2 · Descoberta (2/3)</span>
+          <button class="card-btn" onclick="copyCopy('S2')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-stories/peca-12-story-2-descoberta-1080x1920.png" alt="Story 2">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: Mas o que realmente muda dentro de uma fábrica?
+Não é encher de robôs. É fazer a informação circular.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Construção de Valor</span>
+            <a href="kit-publicitario/05-stories/peca-12-story-2-descoberta-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Story 3 -->
+      <article class="piece-card" data-group="g05">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1920 px</span>
+          <span class="card-name">Story 3 · Produto & CTA (3/3)</span>
+          <button class="card-btn" onclick="copyCopy('S3')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/05-stories/peca-12-story-3-produto-1080x1920.png" alt="Story 3">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TEXTO: Descubra no e-book Afinal, o que é Indústria 4.0?
+CTA: SAIBA MAIS ↗ (Zona segura para sticker de link)</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Fechamento com Link</span>
+            <a href="kit-publicitario/05-stories/peca-12-story-3-produto-1080x1920.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 06: BANNERS PARA LANDING PAGE
+       ============================================================== -->
+  <section class="group-section" data-group="g06">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 06</span>
+          Banners para Landing Page e Apresentações
+        </h2>
+        <p class="group-desc">Composições horizontais (1600 × 900 e 1920 × 1080) e adaptação mobile com ampla área de respiro para textos em HTML.</p>
+      </div>
+    </div>
+    <div class="cards-grid wide-grid">
+      <!-- LP Desktop -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1600 × 900 px</span>
+          <span class="card-name">Banner Hero LP Desktop</span>
+          <button class="card-btn" onclick="copyCopy('B8')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-landing-page/peca-08-banner-lp-desktop-1600x900.png" alt="Banner LP Desktop">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">ÁREA HTML RESERVADA: 60% à esquerda para títulos e botão interativo.
+CAPA HERO: 40% à direita com sombra pura e ranhuras concêntricas.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Hero Desktop 16:9</span>
+            <a href="kit-publicitario/06-banners-landing-page/peca-08-banner-lp-desktop-1600x900.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Promo Laranja -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1920 × 1080 px</span>
+          <span class="card-name">Banner Promocional Laranja</span>
+          <button class="card-btn" onclick="copyCopy('B9_O')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-landing-page/peca-09-banner-promocional-laranja-1920x1080.png" alt="Banner Laranja">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">HEADLINE: O FUTURO DA INDÚSTRIA COMEÇA PELO CONHECIMENTO.
+SUB: Descubra como máquinas, pessoas e dados transformam a produção.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Full HD 1080p</span>
+            <a href="kit-publicitario/06-banners-landing-page/peca-09-banner-promocional-laranja-1920x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Promo Preto -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1920 × 1080 px</span>
+          <span class="card-name">Banner Promocional Preto</span>
+          <button class="card-btn" onclick="copyCopy('B9_B')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-landing-page/peca-09-banner-promocional-preto-1920x1080.png" alt="Banner Preto">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">VERSÃO DARK: Preto dominante com acentos em Laranja industrial
+CTA: CONHEÇA O E-BOOK ↗</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Apresentações & YouTube</span>
+            <a href="kit-publicitario/06-banners-landing-page/peca-09-banner-promocional-preto-1920x1080.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mobile LP -->
+      <article class="piece-card" data-group="g06">
+        <div class="card-top">
+          <span class="dim-pill">1080 × 1350 px</span>
+          <span class="card-name">Banner Hero LP Mobile</span>
+          <button class="card-btn" onclick="copyCopy('B8_M')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/06-banners-landing-page/peca-08-banner-lp-mobile-1080x1350.png" alt="Hero Mobile">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">COMPOSIÇÃO: Enquadramento vertical para telas de smartphones.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Mobile Hero</span>
+            <a href="kit-publicitario/06-banners-landing-page/peca-08-banner-lp-mobile-1080x1350.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==============================================================
+       GRUPO 07: COMPARTILHAMENTO E OPEN GRAPH
+       ============================================================== -->
+  <section class="group-section" data-group="g07">
+    <div class="group-header">
+      <div>
+        <h2 class="group-title">
+          <span class="group-badge">GRUPO 07</span>
+          Compartilhamento Social e Open Graph (1200 × 630)
+        </h2>
+        <p class="group-desc">Formato padrão para compartilhamento de links no WhatsApp, LinkedIn, Twitter e Meta com título e capa legíveis em miniaturas.</p>
+      </div>
+    </div>
+    <div class="cards-grid wide-grid">
+      <article class="piece-card" data-group="g07">
+        <div class="card-top">
+          <span class="dim-pill">1200 × 630 px</span>
+          <span class="card-name">Peça 10 · Card Open Graph / WhatsApp</span>
+          <button class="card-btn" onclick="copyCopy('OG')">Copiar</button>
+        </div>
+        <div class="card-stage">
+          <img src="kit-publicitario/07-compartilhamento-open-graph/peca-10-compartilhamento-og-1200x630.png" alt="Open Graph 1200x630">
+        </div>
+        <div class="card-bottom">
+          <div class="copy-snippet">TAG: COLEÇÃO AFINAL // TECNOLOGIA · VOL. 02
+TÍTULO: AFINAL, O QUE É INDÚSTRIA 4.0?
+SUB: Entenda como máquinas, pessoas e dados estão transformando o chão de fábrica.</div>
+          <div class="card-action-bar">
+            <span style="font-size:11px;color:#94A3B8;">Zonas de Segurança Respeitadas</span>
+            <a href="kit-publicitario/07-compartilhamento-open-graph/peca-10-compartilhamento-og-1200x630.png" download class="btn-dl">Baixar PNG ⤓</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<div class="toast" id="toastMessage">Texto copiado para a área de transferência!</div>
+
+<script>
+// FILTROS
+const filterContainer = document.getElementById('filterContainer');
+const sections = document.querySelectorAll('.group-section');
+const statusCounter = document.getElementById('statusCounter');
+
+filterContainer.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('pill')) return;
+  filterContainer.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  const group = e.target.dataset.filter;
+
+  let visibleCount = 0;
+  sections.forEach(sec => {
+    if (group === 'all' || sec.dataset.group === group) {
+      sec.style.display = 'block';
+      visibleCount += sec.querySelectorAll('.piece-card').length;
+    } else {
+      sec.style.display = 'none';
+    }
+  });
+  statusCounter.textContent = `Exibindo ${visibleCount} peças no filtro selecionado`;
+});
+
+// TOAST
+function showToast(msg) {
+  const t = document.getElementById('toastMessage');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+// COPIAS RÁPIDAS
+const copiesMap = {
+  'T1': `COLEÇÃO AFINAL · TECNOLOGIA · VOL. 02\nAfinal, o que é Indústria 4.0?\nEntenda como máquinas, pessoas e dados estão transformando o chão de fábrica.\nEDIÇÃO DIGITAL · ACESSO IMEDIATO NA KIWIFY ↗`,
+  'T2': `Afinal, o que é Indústria 4.0? — Coleção Afinal (Vol. 02)`,
+  'M1': `E-book em PDF: Afinal, o que é Indústria 4.0?\nCompatível com computador, tablet e celular.`,
+  'M2': `Leitura Digital Acessível: Afinal, o que é Indústria 4.0?\nLayout responsivo e visualização perfeita.`,
+  'M3': `Por dentro da publicação: 12 capítulos, 5 estudos de caso e roteiro prático de 30 dias.`,
+  'A3_1': `HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?\nSUBHEADLINE: Muito além dos robôs: entenda como dados e sistemas transformam a produção.\nCTA: SAIBA MAIS ↗`,
+  'A3_2': `HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?\nSUBHEADLINE: Muito além dos robôs. Entenda como máquinas, pessoas e dados estão transformando a produção sem promessas irreais.\nCTA: SAIBA MAIS ↗`,
+  'A3_3': `HEADLINE: AFINAL, O QUE É INDÚSTRIA 4.0?\nCTA: TOQUE PARA SABER MAIS ↗`,
+  'A4': `HEADLINE: A INDÚSTRIA ESTÁ MUDANDO.\nSUBHEADLINE: Entenda como. Conectividade, dados e pessoas transformando o chão de fábrica.\nCTA: CONHEÇA O E-BOOK ↗`,
+  'A5': `HEADLINE: VOCÊ TRABALHA NA INDÚSTRIA. MAS ENTENDE A TECNOLOGIA POR TRÁS DELA?\nSUBHEADLINE: Conheça a Indústria 4.0 de forma prática, sem jargões e com os desafios reais de quem produz.\nCTA: CONHEÇA O E-BOOK ↗`,
+  'A6': `HEADLINE: SENSORES. DADOS. AUTOMAÇÃO. INTELIGÊNCIA ARTIFICIAL.\nSUBHEADLINE: Entenda como tudo isso se conecta.\nCTA: SAIBA MAIS ↗`,
+  'A7': `HEADLINE: CONHEÇA O E-BOOK.\nSUBHEADLINE: Afinal, o que é Indústria 4.0? Um guia prático para compreender as tecnologias das fábricas modernas.\nCTA: SAIBA MAIS ↗`,
+  'S1': `Todo mundo fala em Indústria 4.0... Mas você sabe o que isso significa de verdade?`,
+  'S2': `Mas o que realmente muda dentro de uma fábrica? Não é encher de robôs. É fazer a informação circular.`,
+  'S3': `Descubra no e-book Afinal, o que é Indústria 4.0?\nCTA: SAIBA MAIS ↗`,
+  'B8': `COLEÇÃO AFINAL // TECNOLOGIA · VOL. 02\nAFINAL, O QUE É INDÚSTRIA 4.0?\nEntenda como máquinas, pessoas e dados estão transformando o chão de fábrica.\nCONHEÇA O E-BOOK ↗`,
+  'B9_O': `O FUTURO DA INDÚSTRIA COMEÇA PELO CONHECIMENTO.\nDescubra como máquinas, pessoas e dados estão transformando a produção.\nCONHEÇA O E-BOOK ↗`,
+  'B9_B': `O FUTURO DA INDÚSTRIA COMEÇA PELO CONHECIMENTO.\nDescubra como máquinas, pessoas e dados estão transformando a produção.\nCONHEÇA O E-BOOK ↗`,
+  'B8_M': `AFINAL, O QUE É INDÚSTRIA 4.0?\nMáquinas, pessoas e dados no chão de fábrica.\nCONHEÇA O E-BOOK ↗`,
+  'OG': `COLEÇÃO AFINAL // TECNOLOGIA · VOL. 02\nAFINAL, O QUE É INDÚSTRIA 4.0?\nEntenda como máquinas, pessoas e dados estão transformando o chão de fábrica.`
+};
+
+function copyCopy(id) {
+  const text = copiesMap[id] || '';
+  navigator.clipboard.writeText(text).then(() => showToast("Texto copiado!"));
+}
+
+const captions = {
+  'PostA': `Existe um mito comum de que uma fábrica só entra na Indústria 4.0 se estiver cheia de robôs caros e braços mecânicos.\n\nA realidade do chão de fábrica é diferente.\n\nUma metalúrgica pode ter células de solda automatizadas e ainda operar no escuro — com paradas anotadas em papéis, estoques divergentes em planilhas e manutenção agindo apenas quando o equipamento quebra.\n\nAutomação executa tarefas. A 4ª Revolução Industrial conecta a informação.\n\nA verdadeira transformação acontece quando o que a máquina percebe (sensores) chega a quem decide (pessoas) no momento certo.\n\nQuer entender como isso funciona na prática, sem promessas irreais?\n\n📖 Conheça o novo e-book da Coleção Afinal: "Afinal, o que é Indústria 4.0?".\n👉 Link disponível na bio.\n\n#Industria40 #AutomacaoIndustrial #ChaoDeFabrica #EngenhariaDeProducao #TecnologiaIndustrial #ColecaoAfinal`,
+  'PostB': `Numa sexta-feira à tarde, o rolamento de um torno começa a vibrar um pouco mais do que o normal. O ruído é sutil. O operador está ocupado. Ninguém percebe. Na segunda-feira, a máquina para.\n\nA máquina já "sabia" que o problema existia. A vibração estava lá. Mas a informação ficou presa dentro dela.\n\nComo fazer essa informação circular antes da parada acontecer?\n\nO percurso do dado na Indústria 4.0 segue 4 passos simples:\n1️⃣ O sensor mede uma grandeza física (vibração, temperatura ou pressão).\n2️⃣ O módulo de aquisição transforma essa grandeza em dado digital.\n3️⃣ A rede industrial (IIoT) transmite o dado até o sistema de monitoramento.\n4️⃣ Um alerta chega à equipe de manutenção para intervir com calma.\n\nTecnologia não substitui o técnico: ela dá a chance de agir mais cedo.\n\nAprenda como estruturar esse fluxo no Capítulo 5 do e-book "Afinal, o que é Indústria 4.0?".\n👉 Acesse pelo link na bio.\n\n#ManutencaoPreditiva #IIoT #Sensores #GestaoIndustrial #EngenhariaMecanica #ColecaoAfinal`,
+  'PostC': `Toda segunda-feira de manhã, muitos gestores se reúnem com frases como:\n— "Acho que paramos bastante semana passada..."\n— "Me parece que a qualidade melhorou..."\n\nO problema não é a falta de experiência da equipe. É que a memória humana lembra do que foi dramático e esquece o que foi frequente e discreto.\n\nÉ aqui que entram os dados.\n• Um dado bruto: "Máquina 3 parou às 10h12."\n• Uma informação contextualizada: "Tivemos 14 horas de parada por falta de matéria-prima."\n• Um indicador confiável: OEE e disponibilidade para orientar Compras e PCP.\n\nSem dados confiáveis, decisões continuam sendo palpites. E um painel moderno com dados duvidosos é pior do que não ter painel.\n\nNo e-book "Afinal, o que é Indústria 4.0?", você encontra checklists práticos, modelos de maturidade digital e um roteiro de 30 dias para organizar processos reais.\n\n👉 Garanta seu exemplar digital no link da bio.\n\n#GestaoDeProducao #PCP #Indicadores #OEE #MelhoriaContinua #Industria40`
+};
+
+function copyLegend(id) {
+  const text = captions[id] || '';
+  navigator.clipboard.writeText(text).then(() => showToast("Legenda completa copiada!"));
+}
+
+function copyAllCaptions() {
+  let all = "=== TODAS AS COPYS E LEGENDAS DO KIT GRÁFICO — INDÚSTRIA 4.0 ===\n\n";
+  for (const [k, v] of Object.entries(copiesMap)) {
+    all += `--- [PEÇA ${k}] ---\n${v}\n\n`;
+  }
+  all += "\n=== LEGENDAS PARA REDES SOCIAIS ===\n\n";
+  for (const [k, v] of Object.entries(captions)) {
+    all += `--- [${k}] ---\n${v}\n\n`;
+  }
+  navigator.clipboard.writeText(all).then(() => showToast("Todas as copys e legendas copiadas!"));
+}
+</script>
+</body>
+</html>

@@ -5,8 +5,33 @@ window.INDUSTRIA_CONFIG = Object.freeze({
   price: '',
   author: '',
   contactEmail: '',
-  cover: '', // Caminho local da capa oficial, ex.: assets/capa.webp. Ainda não fornecida.
-  previewImages: [], // Páginas reais: [{ src, alt, width, height }]. Nunca usar páginas simuladas.
+  cover: 'assets/capa.webp', // Capa oficial extraída em alta resolução do PDF
+  previewImages: [
+    {
+      src: 'assets/pagina_2.webp',
+      alt: 'Folha de rosto e ficha técnica oficial',
+      width: 1191,
+      height: 1683
+    },
+    {
+      src: 'assets/pagina_3.webp',
+      alt: 'Apresentação: o mito dos robôs vs. a realidade da informação',
+      width: 1191,
+      height: 1683
+    },
+    {
+      src: 'assets/pagina_8.webp',
+      alt: 'Capítulo 1: a quarta revolução e a linha do tempo industrial',
+      width: 1191,
+      height: 1683
+    },
+    {
+      src: 'assets/pagina_26.webp',
+      alt: 'Capítulo 4: sensores, controladores e atuadores na prática',
+      width: 1191,
+      height: 1683
+    }
+  ],
   // Títulos confirmados pelo usuário. Grupos temáticos são a organização editorial da página.
   chapterGroups: [
     {
