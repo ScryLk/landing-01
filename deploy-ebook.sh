@@ -23,8 +23,13 @@ fi
 ACTION="$1"
 INPUT_SLUG="$2"
 
-# Normalizacao de slug e configuracao do produto
 case "$INPUT_SLUG" in
+    portal)
+        APP_NAME="portal"
+        PUB_SLUG="portal"
+        SITE_URL="https://dobraverse.io/"
+        BUILD_CMD="pnpm build:portal"
+        ;;
     industria|industria-40)
         APP_NAME="industria-40"
         PUB_SLUG="industria-40"
@@ -36,6 +41,12 @@ case "$INPUT_SLUG" in
         PUB_SLUG="experiencia-tecnologia"
         SITE_URL="https://experiencia-tecnologia.dobraverse.io/"
         BUILD_CMD="pnpm build:experiencia"
+        ;;
+    ia|inteligencia-artificial)
+        APP_NAME="inteligencia-artificial"
+        PUB_SLUG="inteligencia-artificial"
+        SITE_URL="https://ia.dobraverse.io/"
+        BUILD_CMD="pnpm build:ia"
         ;;
     *)
         APP_NAME="$INPUT_SLUG"

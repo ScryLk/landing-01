@@ -4,6 +4,7 @@ Publique apenas o `dist/` de cada aplicação. O repositório, `node_modules`, f
 
 | Aplicação | Diretório do app | Comando na raiz | Saída relativa à raiz |
 | --- | --- | --- | --- |
+| Portal Dobraverse (Apex) | `apps/portal` | `pnpm build:portal` | `apps/portal/dist` |
 | Experiência à Tecnologia | `apps/experiencia-tecnologia` | `pnpm build:experiencia` | `apps/experiencia-tecnologia/dist` |
 | Indústria 4.0 | `apps/industria-40` | `pnpm build:industria` | `apps/industria-40/dist` |
 | Inteligência Artificial | `apps/inteligencia-artificial` | `pnpm build:ia` | `apps/inteligencia-artificial/dist` |

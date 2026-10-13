@@ -32,6 +32,15 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
 
+  apps/portal:
+    devDependencies:
+      '@dobraverse/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@dobraverse/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+
   packages/config: {}
 
   packages/ui: {}

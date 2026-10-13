@@ -16,6 +16,8 @@
     "dev:experiencia": "pnpm --filter @dobraverse/experiencia-tecnologia dev",
     "dev:industria": "pnpm --filter @dobraverse/industria-40 dev",
     "build:ia": "pnpm --filter @dobraverse/inteligencia-artificial build",
-    "dev:ia": "pnpm --filter @dobraverse/inteligencia-artificial dev"
+    "dev:ia": "pnpm --filter @dobraverse/inteligencia-artificial dev",
+    "build:portal": "pnpm --filter @dobraverse/portal build",
+    "dev:portal": "pnpm --filter @dobraverse/portal dev"
   }
 }
